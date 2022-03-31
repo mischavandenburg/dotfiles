@@ -88,7 +88,7 @@ source $ZSH/oh-my-zsh.sh
 # bind accept suggestion to control space
 bindkey '^ ' autosuggest-accept
 
-# load amsterdam public key
+# load public key
 ssh-add ~/.ssh/mburg
 
 # My vars
