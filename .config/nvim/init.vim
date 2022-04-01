@@ -2,6 +2,11 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
 
+" custom commands
+set ignorecase
+:syntax enable
+
+" plugin manager
 call plug#begin()
 " The default plugin directory will be as follows:
 "   - Vim (Linux/macOS): '~/.vim/plugged'
@@ -21,6 +26,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
+" ansible-vim plugin vars
 let g:ansible_unindent_after_newline = 1
 let g:ansible_extra_keywords_highlight = 1
 
