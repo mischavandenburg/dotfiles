@@ -31,7 +31,11 @@ alias ls='ls --color=auto'
 alias ll='ls -la'
 alias la='ls -la'
 
+# fzf aliases
+# use fp to do a fzf search and preview the files
 alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+alias vf='v $(fzf)'
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
