@@ -22,6 +22,8 @@ ssh-add ~/.ssh/mburg
 # custom variables
 export CLOUD="/Users/mischa/Library/Mobile Documents/com~apple~CloudDocs"
 export GDRIVE="/Users/mischa/Google Drive/My Drive"
+export VISUAL=nvim
+export EDITOR=nvim
 
 #  custom aliases
 alias ca="cd ~/work/amsterdam/Openstack/"
