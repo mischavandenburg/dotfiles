@@ -17,10 +17,11 @@ call plug#begin()
 
 Plug 'pearofducks/ansible-vim'
 Plug 'rhysd/committia.vim'
-
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 let g:ansible_unindent_after_newline = 1
 let g:ansible_extra_keywords_highlight = 1
 
-set rtp+=/usr/local/opt/fzf
+" set rtp+=/usr/local/opt/fzf
