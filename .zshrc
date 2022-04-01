@@ -5,8 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -79,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions zsh-history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,7 +86,11 @@ source $ZSH/oh-my-zsh.sh
 # bind accept suggestion to control space
 bindkey '^ ' autosuggest-accept
 
-# load public key
+# keybinds for history search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# load ssh key
 ssh-add ~/.ssh/mburg
 
 # My vars
