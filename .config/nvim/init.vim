@@ -13,7 +13,10 @@ call plug#begin()
 
 " Make sure you use single quotes
 
+" the stdpath on my mac is /Users/mischa/.local/share/nvim
+
 Plug 'pearofducks/ansible-vim'
+Plug 'rhysd/committia.vim'
 
 call plug#end()
 
