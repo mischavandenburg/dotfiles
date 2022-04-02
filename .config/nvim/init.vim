@@ -11,6 +11,7 @@ set hidden
 set ignorecase
 set incsearch
 set scrolloff=8
+set mouse=a
 
 :syntax enable
 
