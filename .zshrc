@@ -24,6 +24,13 @@ export VISUAL=nvim
 export EDITOR=nvim
 export PATH=$PATH:/usr/local/bin/
 
+# Set history file 
+HISTFILE="$HOME/.zsh_history"
+# Number of events loaded into memory
+HISTSIZE=10000
+# Number of events stored in the zsh history file
+SAVEHIST=10000
+
 #  custom aliases
 alias ca="cd ~/work/amsterdam/Openstack/"
 alias v="nvim"

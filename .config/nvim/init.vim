@@ -33,6 +33,8 @@ Plug 'rhysd/committia.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 
 " ansible-vim plugin vars
