@@ -4,6 +4,14 @@ source ~/.vimrc
 
 " custom commands
 set ignorecase
+set relativenumber
+set nu
+set nohlsearch
+set hidden
+set ignorecase
+set incsearch
+set scrolloff=8
+
 :syntax enable
 
 " plugin manager

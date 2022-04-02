@@ -36,6 +36,7 @@ alias la='ls -la'
 # fzf aliases
 # use fp to do a fzf search and preview the files
 alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+# search for a file with fzf and open it in vim
 alias vf='v $(fzf)'
 
 
