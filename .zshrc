@@ -35,10 +35,12 @@ SAVEHIST=10000
 alias ca="cd ~/work/amsterdam/Openstack/"
 alias v="nvim"
 alias ..="cd .."
-
+alias c="clear"
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias la='ls -la'
+alias sv='sudo nvim'
+
 
 # fzf aliases
 # use fp to do a fzf search and preview the files
