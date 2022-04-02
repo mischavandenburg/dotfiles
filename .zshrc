@@ -28,6 +28,7 @@ export EDITOR=nvim
 #  custom aliases
 alias ca="cd ~/work/amsterdam/Openstack/"
 alias v="nvim"
+alias ..="cd .."
 
 alias ls='ls --color=auto'
 alias ll='ls -la'
