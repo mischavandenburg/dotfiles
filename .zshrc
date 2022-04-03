@@ -49,12 +49,36 @@ alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}
 # search for a file with fzf and open it in vim
 alias vf='v $(fzf)'
 
-# source the keybindings for ubuntu
-source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+# OS specific 
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        # ...
+# source the keybindings for ubuntu
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+
+# Mac OSX
 # source the bindings for mac
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+        # POSIX compatibility layer and Linux environment emulation for Windows
+elif [[ "$OSTYPE" == "msys" ]]; then
+        # Lightweight shell and GNU utilities compiled for Windows (part of MinGW)
+elif [[ "$OSTYPE" == "win32" ]]; then
+        # I'm not sure this can happen.
+elif [[ "$OSTYPE" == "freebsd"* ]]; then
+        # ...
+else
+        # Unknown.
+fi
+
+
