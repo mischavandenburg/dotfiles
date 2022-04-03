@@ -40,8 +40,8 @@ alias ls='ls --color=auto'
 alias ll='ls -la'
 alias la='ls -la'
 alias sv='sudo nvim'
-
-
+alias t='tmux'
+alias e='exit'
 # fzf aliases
 # use fp to do a fzf search and preview the files
 alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
