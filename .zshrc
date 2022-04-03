@@ -41,8 +41,6 @@ alias ll='ls -la'
 alias la='ls -la'
 alias sv='sudoedit'
 
-
-alias sv='sudo nvim'
 alias t='tmux'
 alias e='exit'
 # fzf aliases
