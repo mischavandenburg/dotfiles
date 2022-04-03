@@ -39,7 +39,7 @@ alias c="clear"
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias la='ls -la'
-alias sv='sudo nvim'
+alias sv='sudoedit'
 
 
 # fzf aliases
@@ -48,8 +48,12 @@ alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}
 # search for a file with fzf and open it in vim
 alias vf='v $(fzf)'
 
+# source the keybindings for ubuntu
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# source the bindings for mac
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
