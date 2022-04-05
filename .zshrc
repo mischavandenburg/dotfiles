@@ -15,6 +15,8 @@ znap source zsh-users/zsh-autosuggestions
 bindkey '^ ' autosuggest-accept
 
 # ssh
+eval $(ssh-agent)
+ssh-add ~/.ssh/mischa
 ssh-add ~/.ssh/mburg
 
 # custom variables
@@ -60,10 +62,17 @@ alias vf='v $(fzf)'
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         # ...
 # source the keybindings for ubuntu
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+if grep ubuntu /etc/os-release; then
+  source /usr/share/doc/fzf/examples/key-bindings.zsh
+fi
+
 
 # source for manjaro
-source /usr/share/fzf/key-bindings.zsh
+if grep manjaro /etc/os-release; then
+  source /usr/share/fzf/key-bindings.zsh
+fi
+
+
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 
 # Mac OSX
