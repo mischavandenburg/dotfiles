@@ -62,6 +62,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 # source the keybindings for ubuntu
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 
+# source for manjaro
+source /usr/share/fzf/key-bindings.zsh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 
 # Mac OSX
@@ -80,5 +82,3 @@ elif [[ "$OSTYPE" == "freebsd"* ]]; then
 else
         # Unknown.
 fi
-
-
