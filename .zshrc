@@ -14,10 +14,20 @@ znap source zsh-users/zsh-autosuggestions
 # bind accept suggestion to control space
 bindkey '^ ' autosuggest-accept
 
-# ssh
-eval $(ssh-agent)
-ssh-add ~/.ssh/mischa
-ssh-add ~/.ssh/mburg
+# SSH CONFIGURATION
+# This script checks if ssh agent is running, starts ssh agent if needed and loads the keys.  
+
+if [ $(ps ax | grep "[s]sh-agent" | wc -l) -eq 0 ] ; then
+    eval $(ssh-agent -s) > /dev/null
+    if [ "$(ssh-add -l)" = "The agent has no identities." ] ; then
+        # Auto-add ssh keys to your ssh agent
+        # Example:
+        # ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
+        ssh-add -q ~/.ssh/mischa
+        ssh-add -q ~/.ssh/mburg
+    fi
+fi
+
 
 # custom variables
 export CLOUD="/Users/mischa/Library/Mobile Documents/com~apple~CloudDocs"
@@ -61,24 +71,22 @@ alias vf='v $(fzf)'
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         # ...
+
 # source the keybindings for ubuntu
 if grep ubuntu /etc/os-release; then
   source /usr/share/doc/fzf/examples/key-bindings.zsh
 fi
-
 
 # source for manjaro
 if grep manjaro /etc/os-release; then
   source /usr/share/fzf/key-bindings.zsh
 fi
 
-
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 
 # Mac OSX
 # source the bindings for mac
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 
 elif [[ "$OSTYPE" == "cygwin" ]]; then
         # POSIX compatibility layer and Linux environment emulation for Windows
