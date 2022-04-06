@@ -23,11 +23,12 @@ if [ $(ps ax | grep "[s]sh-agent" | wc -l) -eq 0 ] ; then
         # Auto-add ssh keys to your ssh agent
         # Example:
         # ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
-        ssh-add -q ~/.ssh/mischa
-        ssh-add -q ~/.ssh/mburg
     fi
 fi
 
+# adding keys was buggy, add them outside of the script for now
+ssh-add -q ~/.ssh/mischa
+ssh-add -q ~/.ssh/mburg
 
 # custom variables
 export CLOUD="/Users/mischa/Library/Mobile Documents/com~apple~CloudDocs"
