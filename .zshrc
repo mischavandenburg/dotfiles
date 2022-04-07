@@ -13,6 +13,8 @@ znap source zsh-users/zsh-autosuggestions
 # keybinds
 # bind accept suggestion to control space
 bindkey '^ ' autosuggest-accept
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
 
 # SSH CONFIGURATION
 # This script checks if ssh agent is running, starts ssh agent if needed and loads the keys.  
@@ -100,3 +102,4 @@ elif [[ "$OSTYPE" == "freebsd"* ]]; then
 else
         # Unknown.
 fi
+
