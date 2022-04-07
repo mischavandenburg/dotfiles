@@ -55,7 +55,7 @@ alias ls='ls --color=auto'
 alias ll='ls -la'
 alias la='ls -la'
 alias sv='sudoedit'
-
+alias sk='killall ssh-agent && source ~/.zshrc'
 alias t='tmux'
 alias e='exit'
 # fzf aliases
@@ -76,12 +76,12 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         # ...
 
 # source the keybindings for ubuntu
-if grep ubuntu /etc/os-release; then
+if grep -q ubuntu /etc/os-release; then
   source /usr/share/doc/fzf/examples/key-bindings.zsh
 fi
 
 # source for manjaro
-if grep manjaro /etc/os-release; then
+if grep -q manjaro /etc/os-release; then
   source /usr/share/fzf/key-bindings.zsh
 fi
 
