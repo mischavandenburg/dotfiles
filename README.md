@@ -1,6 +1,3 @@
-# dotfiles
-My configuration files  
-  
 # KEYBINDINGS CHEATSHEET  
 Currently using vanilla keybindings for vim and tmux.  
   
