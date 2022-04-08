@@ -1,21 +1,19 @@
 # dotfiles
 My configuration files  
-
-TODO make this pretty with markdown  
   
 # KEYBINDINGS CHEATSHEET  
 Currently using vanilla keybindings for vim and tmux.  
   
-##TMUX  
+## TMUX  
 
-COPY MODE
-Press CTRL + B [ 
-use vim keys to navigate and trigger selection with v (visual mode)
-press enter to copy to clipboard
-
+### COPY MODE  
+Press CTRL + B [  
+use vim keys to navigate and trigger selection with v (visual mode)  
+press enter to copy to clipboard  
+  
 CTRL + B ? list keybindings  
   
-Panes  
+### PANES  
 CTRL + D kill current pane
 CTRL + Z zoom in, make current pane fullscreen. Repeat to zoom out
 
@@ -25,8 +23,7 @@ CTRL + B arrowkeys swich pane
 CTRL + B o switch to next pane  
 CTRL + B x kill pane, with prompt
   
-VIM  
-  
+### VIM  
 CTRL + W v split vertical  
 CTRL + W s split horizontal  
 CTRL + W q kill window  
