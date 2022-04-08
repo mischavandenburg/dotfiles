@@ -7,7 +7,12 @@ TODO make this pretty with markdown
 Currently using vanilla keybindings for vim and tmux.  
   
 ##TMUX  
-  
+
+COPY MODE
+Press CTRL + B [ 
+use vim keys to navigate and trigger selection with v (visual mode)
+press enter to copy to clipboard
+
 CTRL + B ? list keybindings  
   
 Panes  
