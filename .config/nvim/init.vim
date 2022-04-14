@@ -3,7 +3,6 @@ let &packpath = &runtimepath
 source ~/.vimrc
 
 " custom commands
-set ignorecase
 set relativenumber
 set nu
 set nohlsearch
@@ -12,6 +11,8 @@ set ignorecase
 set incsearch
 set scrolloff=8
 set mouse=a
+set undodir=~/.vim/undodir
+set undofile
 
 :syntax enable
 
@@ -34,6 +35,7 @@ Plug 'rhysd/committia.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'mbbill/undotree'
 
 call plug#end()
 

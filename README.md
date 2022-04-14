@@ -20,7 +20,7 @@ CTRL + B arrowkeys swich pane
 CTRL + B o switch to next pane  
 CTRL + B x kill pane, with prompt
   
-### VIM  
+## VIM  
 CTRL + W v split vertical  
 CTRL + W s split horizontal  
 CTRL + W q kill window  
