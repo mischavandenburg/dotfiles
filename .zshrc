@@ -37,7 +37,7 @@ export CLOUD="/Users/mischa/Library/Mobile Documents/com~apple~CloudDocs"
 export GDRIVE="/Users/mischa/Google Drive/My Drive"
 export VISUAL=nvim
 export EDITOR=nvim
-export PATH=$PATH:/usr/local/bin/
+export PATH=$PATH:/usr/local/bin/:/Users/mischa/Library/Python/3.8/bin
 
 # Set history file 
 HISTFILE="$HOME/.zsh_history"
@@ -64,7 +64,8 @@ alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}
 # search for a file with fzf and open it in vim
 alias vf='v $(fzf)'
 
-
+# pyenv
+eval "$(pyenv init -)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
