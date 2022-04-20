@@ -65,6 +65,7 @@ alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}
 alias vf='v $(fzf)'
 
 # pyenv
+eval "$(pyenv virtualenv-init -)"
 eval "$(pyenv init -)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -103,3 +104,6 @@ elif [[ "$OSTYPE" == "freebsd"* ]]; then
 else
         # Unknown.
 fi
+
+. /usr/local/opt/asdf/libexec/asdf.sh
+
