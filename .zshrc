@@ -64,9 +64,6 @@ alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}
 # search for a file with fzf and open it in vim
 alias vf='v $(fzf)'
 
-# pyenv
-eval "$(pyenv virtualenv-init -)"
-eval "$(pyenv init -)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -85,6 +82,11 @@ fi
 # source for manjaro
 if grep -q manjaro /etc/os-release; then
   source /usr/share/fzf/key-bindings.zsh
+  echo "Here's Johnny!"
+  
+  # for pyenv
+  eval "$(pyenv init -)"
+
 fi
 
 elif [[ "$OSTYPE" == "darwin"* ]]; then
@@ -92,6 +94,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 # Mac OSX
 # source the bindings for mac
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# pyenv
+eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init -)"
 
 elif [[ "$OSTYPE" == "cygwin" ]]; then
         # POSIX compatibility layer and Linux environment emulation for Windows
