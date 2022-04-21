@@ -37,7 +37,9 @@ export CLOUD="/Users/mischa/Library/Mobile Documents/com~apple~CloudDocs"
 export GDRIVE="/Users/mischa/Google Drive/My Drive"
 export VISUAL=nvim
 export EDITOR=nvim
-export PATH=$PATH:/usr/local/bin/:/Users/mischa/Library/Python/3.8/bin
+# export PATH=$PATH:/usr/local/bin/:/Users/mischa/Library/Python/3.8/bin
+
+export PATH=$PATH:/usr/local/bin/
 
 # Set history file 
 HISTFILE="$HOME/.zsh_history"
@@ -96,7 +98,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # pyenv
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv virtualenv-init -)"
 eval "$(pyenv init -)"
 
 elif [[ "$OSTYPE" == "cygwin" ]]; then
