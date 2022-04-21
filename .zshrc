@@ -84,7 +84,6 @@ fi
 # source for manjaro
 if grep -q manjaro /etc/os-release; then
   source /usr/share/fzf/key-bindings.zsh
-  echo "Here's Johnny!"
   
   # for pyenv
   eval "$(pyenv init -)"
@@ -113,5 +112,6 @@ else
         # Unknown.
 fi
 
-. /usr/local/opt/asdf/libexec/asdf.sh
+# use this for using asdf if needed 
+# . /usr/local/opt/asdf/libexec/asdf.sh
 
