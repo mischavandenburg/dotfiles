@@ -23,7 +23,7 @@ env:
   # available, otherwise `xterm-256color` is used.
   # TERM: alacritty
   TERM: xterm-256color
-window:
+#window:
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
@@ -78,7 +78,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode: Maximized 
+  #startup_mode: Maximized 
 
   # Window title
   #title: Alacritty
