@@ -49,7 +49,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 #  custom aliases
-alias ca="cd ~/work/amsterdam/Openstack/"
+alias ca="cd ~/git/Openstack/"
 alias v="nvim"
 alias ..="cd .."
 alias c="clear"
