@@ -5,8 +5,7 @@ Currently using vanilla keybindings for vim and tmux.
 
 ### COPY MODE  
 Press CTRL + B [  
-use vim keys to navigate and trigger selection with v (visual mode)  
-press enter to copy to clipboard  
+use vim keys to navigate and start selection with Space, and copy the selection to clipboard by pressing enter.
   
 CTRL + B ? list keybindings  
   
