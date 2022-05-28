@@ -36,11 +36,16 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
 " ansible-vim plugin vars
 let g:ansible_unindent_after_newline = 1
 let g:ansible_extra_keywords_highlight = 1
+
+" indentLine
+let g:indentLine_char = '¦'
+
 
 " set rtp+=/usr/local/opt/fzf
