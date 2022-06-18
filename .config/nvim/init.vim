@@ -3,8 +3,10 @@ let &packpath = &runtimepath
 source ~/.vimrc
 
 " custom commands
-set relativenumber
-set nu
+"
+" line numbers:
+" set relativenumber
+" set nu
 set nohlsearch
 set hidden
 set ignorecase
