@@ -60,6 +60,7 @@ alias sv='sudoedit'
 alias sk='killall ssh-agent && source ~/.zshrc'
 alias t='tmux'
 alias e='exit'
+alias gp='git pull'
 # fzf aliases
 # use fp to do a fzf search and preview the files
 alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
