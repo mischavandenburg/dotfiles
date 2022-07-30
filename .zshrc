@@ -48,6 +48,9 @@ HISTSIZE=10000
 # Number of events stored in the zsh history file
 SAVEHIST=10000
 
+# terminal colors
+export LS_COLORS='di=0;31'
+
 #  custom aliases
 alias ca="cd ~/git/Openstack/"
 alias v="nvim"
