@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# packages to install
+# amethyst
+# fzf
+# nvim exa
+
+export XDG_CONFIG_HOME="$HOME"/.config
+mkdir -p "$HOME"/.config/bash
+mkdir -p "$HOME"/.config/alacritty
+
+git clone https://github.com/magicmonty/bash-git-prompt.git ""$XDG_CONFIG_HOME"/bash/.bash-git-prompt" --depth=1
+# Symbolic links
+
+# ln -s ./.amethyst.yml "$HOME"/.amethyst.yml
+ln -sf "$PWD/alacritty.yml" "$XDG_CONFIG_HOME/alacritty/alacritty.yml"
+ln -sf "$PWD/.bash_profile" "$HOME"/.bash_profile
+ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
+ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
