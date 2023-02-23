@@ -16,26 +16,31 @@ bind -x '"\C-l":clear'
 # ~~~~~~~~~~~~~~~ Path configuration ~~~~~~~~~~~~~~~~~~~~~~~~
 # function from Arch Wiki, to prevent adding directories multiple times
 
-set_path(){
+# set_path(){
+#
+#     # Check if user id is 1000 or higher
+#     [ "$(id -u)" -ge 1000 ] || return
+#
+#     for i in "$@";
+#     do
+#         # Check if the directory exists
+#         [ -d "$i" ] || continue
+#
+#         # Check if it is not already in your $PATH.
+#         echo "$PATH" | grep -Eq "(^|:)$i(:|$)" && continue
+#
+#         # Then append it to $PATH and export it
+#         export PATH="${PATH}:$i"
+#     done
+# }
+#
+# set_path "$HOME"/git/lab/bash "$HOME"/.local/bin
 
-    # Check if user id is 1000 or higher
-    [ "$(id -u)" -ge 1000 ] || return
+# https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path
+# PATH="${PATH:+${PATH}:}~/opt/bin"   # appending
+# PATH="~/opt/bin${PATH:+:${PATH}}"   # prepending
 
-    for i in "$@";
-    do
-        # Check if the directory exists
-        [ -d "$i" ] || continue
-
-        # Check if it is not already in your $PATH.
-        echo "$PATH" | grep -Eq "(^|:)$i(:|$)" && continue
-
-        # Then append it to $PATH and export it
-        export PATH="${PATH}:$i"
-    done
-}
-
-set_path "$HOME"/git/lab/bash "$HOME"/.local/bin
-
+PATH="${PATH:+${PATH}:}"$HOME"/git/lab/bash"   # appending
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
 
 export HISTFILE=~/.histfile
@@ -53,8 +58,9 @@ if [[ ! "$SSH_AUTH_SOCK" ]]; then
 fi
 
 # adding keys was buggy, add them outside of the script for now
-ssh-add -q ~/.ssh/mischa
-ssh-add -q ~/.ssh/mburg
+# ssh-add -q ~/.ssh/mischa
+# ssh-add -q ~/.ssh/mburg
+ssh-add -q ~/.ssh/id_ed25519
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -74,6 +80,7 @@ alias ..="cd .."
 alias scripts="cd ~/git/lab/bash"
 alias cdblog="cd ~/websites/blog"
 alias lab="cd ~/git/lab"
+alias dot="cd ~/git/dotfiles"
 
 alias c="clear"
 

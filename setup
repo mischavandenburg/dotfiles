@@ -3,7 +3,7 @@
 # packages to install
 # amethyst
 # fzf
-# nvim exa
+# nvim exa hugo
 
 export XDG_CONFIG_HOME="$HOME"/.config
 mkdir -p "$HOME"/.config/bash
@@ -18,3 +18,7 @@ ln -sf "$PWD/.bash_profile" "$HOME"/.bash_profile
 ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
 ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
 ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME/nvim"
+
+# set up blog
+# git clone git@github.com:mischavandenburg/hugo-PaperModX-theme.git themes/PaperModX --depth=1
+
