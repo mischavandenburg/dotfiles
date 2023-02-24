@@ -1,0 +1,9 @@
+# Control apple music globally
+# Based on Aesome-copycats theme for AesomeWM
+
+ctrl + cmd + fn - up : osascript -e 'tell app "Music" to playpause'
+ctrl + cmd + fn - left : osascript -e 'tell app "Music" to back track'
+ctrl + cmd + fn - right : osascript -e 'tell app "Music" to play next track'
+
+# open new terminal
+cmd - return : alacritty

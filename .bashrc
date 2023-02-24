@@ -87,7 +87,8 @@ alias c="clear"
 # ls
 alias ls='ls --color=auto'
 alias ll='ls -la'
-alias la='exa -laghm@ --all --icons --git --color=always'
+# alias la='exa -laghm@ --all --icons --git --color=always'
+alias la='ls -lathr'
 
 alias sv='sudoedit'
 alias sk='killall ssh-agent && source ~/.zshrc'
