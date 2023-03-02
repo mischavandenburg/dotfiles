@@ -9,6 +9,7 @@ return {
         pyright = {},
         bashls = {},
         gopls = {},
+        bicep = {},
       },
     },
   },

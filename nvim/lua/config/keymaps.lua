@@ -14,3 +14,5 @@ vim.keymap.set(
   '<cmd>lua require("cmp").setup { enabled = false }<cr>',
   { desc = "Disable completion" }
 )
+
+vim.keymap.set("i", "jk", "<Esc>", { desc = "Escape jk" })

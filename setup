@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# packages to install
+# brew packages to install
 # amethyst
 # fzf
 # nvim exa hugo
+# bash-completion@2
 
 # create directories
 export XDG_CONFIG_HOME="$HOME"/.config

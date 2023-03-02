@@ -139,6 +139,9 @@ source "$HOME/.privaterc"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     source "$HOME/.fzf.bash"
+
+    # brew bash completion
+    [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 else
     source /usr/share/fzf/key-bindings.bash
     source /usr/share/fzf/completion.bash
