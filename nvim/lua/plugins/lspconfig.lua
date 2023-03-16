@@ -10,6 +10,7 @@ return {
         bashls = {},
         gopls = {},
         bicep = {},
+        -- yamlls = {},
       },
     },
   },

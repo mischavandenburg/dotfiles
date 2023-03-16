@@ -40,7 +40,7 @@ bind -x '"\C-l":clear'
 # PATH="${PATH:+${PATH}:}~/opt/bin"   # appending
 # PATH="~/opt/bin${PATH:+:${PATH}}"   # prepending
 
-PATH="${PATH:+${PATH}:}"$HOME"/git/lab/bash"   # appending
+PATH="${PATH:+${PATH}:}"$HOME"/git/lab/bash:/opt/homebrew/opt/dotnet@6/bin" # appending
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
 
 export HISTFILE=~/.histfile
@@ -50,23 +50,24 @@ export SAVEHIST=10000
 # ~~~~~~~~~~~~~~~ SSH ~~~~~~~~~~~~~~~~~~~~~~~~
 # SSH Script from arch wiki
 
-if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
+if ! pgrep -u "$USER" ssh-agent >/dev/null; then
+	ssh-agent >"$XDG_RUNTIME_DIR/ssh-agent.env"
 fi
 if [[ ! "$SSH_AUTH_SOCK" ]]; then
-    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+	source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
 # adding keys was buggy, add them outside of the script for now
 # ssh-add -q ~/.ssh/mischa
 # ssh-add -q ~/.ssh/mburg
 ssh-add -q ~/.ssh/id_ed25519
+ssh-add -q ~/.ssh/ns
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
 if [[ -f "$XDG_CONFIG_HOME/bash/.bash-git-prompt/gitprompt.sh" ]]; then
-    export GIT_PROMPT_ONLY_IN_REPO=1
-    source "$XDG_CONFIG_HOME/bash/.bash-git-prompt/gitprompt.sh"
+	export GIT_PROMPT_ONLY_IN_REPO=1
+	source "$XDG_CONFIG_HOME/bash/.bash-git-prompt/gitprompt.sh"
 fi
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -123,8 +124,10 @@ alias fishies=asciiquarium
 
 # kubectl
 alias k='kubectl'
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl k
 
-# env variables 
+# env variables
 export VISUAL=nvim
 export EDITOR=nvim
 
@@ -134,15 +137,19 @@ alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}
 # search for a file with fzf and open it in vim
 alias vf='v $(fp)'
 
-# sourcing 
+# sourcing
 source "$HOME/.privaterc"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    source "$HOME/.fzf.bash"
+	source "$HOME/.fzf.bash"
 
-    # brew bash completion
-    [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+	# brew bash completion
+	[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 else
-    source /usr/share/fzf/key-bindings.bash
-    source /usr/share/fzf/completion.bash
+	source /usr/share/fzf/key-bindings.bash
+	source /usr/share/fzf/completion.bash
 fi
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/mischa/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

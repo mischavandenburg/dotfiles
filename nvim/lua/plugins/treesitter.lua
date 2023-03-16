@@ -16,6 +16,7 @@ return {
         "vim",
         "yaml",
         "go",
+        "bicep",
       },
     },
   },
