@@ -12,7 +12,7 @@ mkdir -p "$XDG_CONFIG_HOME"/bash
 mkdir -p "$XDG_CONFIG_HOME"/alacritty
 mkdir -p "$XDG_CONFIG_HOME"/skhd
 
-git clone https://github.com/magicmonty/bash-git-prompt.git "$XDG_CONFIG_HOME"/bash/.bash-git-prompt --depth=1
+# git clone https://github.com/magicmonty/bash-git-prompt.git "$XDG_CONFIG_HOME"/bash/.bash-git-prompt --depth=1
 
 # Symbolic links
 
@@ -26,4 +26,3 @@ ln -sf "$PWD/skhdrc" "$XDG_CONFIG_HOME"/skhd/skhdrc
 
 # set up blog
 # git clone git@github.com:mischavandenburg/hugo-PaperModX-theme.git themes/PaperModX --depth=1
-

@@ -12,6 +12,14 @@ set -o vi
 
 # keybinds
 bind -x '"\C-l":clear'
+# ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
+
+export REPOS="$HOME/Repos"
+export GITUSER="mischavandenburg"
+export GHREPOS="$REPOS/github.com/$GITUSER"
+export DOTFILES="$GHREPOS/dotfiles"
+export LAB="$GHREPOS/lab"
+export SCRIPTS="$GHREPOS/lab/bash"
 
 # ~~~~~~~~~~~~~~~ Path configuration ~~~~~~~~~~~~~~~~~~~~~~~~
 # function from Arch Wiki, to prevent adding directories multiple times
@@ -40,20 +48,12 @@ bind -x '"\C-l":clear'
 # PATH="${PATH:+${PATH}:}~/opt/bin"   # appending
 # PATH="~/opt/bin${PATH:+:${PATH}}"   # prepending
 
-PATH="${PATH:+${PATH}:}"$HOME"/git/lab/bash:/opt/homebrew/opt/dotnet@6/bin" # appending
+PATH="${PATH:+${PATH}:}"$SCRIPTS":/opt/homebrew/opt/dotnet@6/bin" # appending
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
 
 export HISTFILE=~/.histfile
 export HISTSIZE=25000
 export SAVEHIST=25000
-
-# ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
-
-export REPOS="$HOME/Repos"
-export GITUSER="mischavandenburg"
-export GHREPOS="$REPOS/github.com/$GITUSER"
-export DOTFILES="$GHREPOS/dotfiles"
-export LAB="$GHREPOS/lab"
 
 # ~~~~~~~~~~~~~~~ Functions ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -111,10 +111,11 @@ alias vim=nvim
 # cd
 alias ca="cd ~/git/ns/"
 alias ..="cd .."
-alias scripts="cd ~/git/lab/bash"
+alias scripts='cd $LAB/bash'
 alias cdblog="cd ~/websites/blog"
-alias lab='cd $GHREPOS/lab'
+alias lab='cd $LAB'
 alias dot='cd $GHREPOS/dotfiles'
+alias repos='cd $REPOS'
 
 alias c="clear"
 
