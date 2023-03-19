@@ -1,0 +1,3 @@
+#!/bin/bash
+# this script searches duckduck go with w3m. Inspired by rwxrob.
+exec w3m "duckduckgo.com/lite?kd=-1&kp=-1&q=$*"

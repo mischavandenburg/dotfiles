@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Script from rwx.gg
+# Mischa's explanation:
+# it takes the content of the $PATH environment variable and replaces every : with a newline character.
+# the// is actually a syntax for search and replace, similar to s/123/456/g in sed and vim
+# https://mischavandenburg.com/zet/slash-syntax-replace/
+
+echo -e ${PATH//:/\\n}

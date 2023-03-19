@@ -1,0 +1,7 @@
+#!/bin/bash
+# This replaces the dashes with white space
+# https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
+# https://stackoverflow.com/questions/63707634/replace-string-in-variable-using-bash
+kek="my-dashed-string"
+kek="${kek//-/ }"
+echo "$kek"

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+db_list=$(psql --record-separator="," -q -t -c "SELECT array(SELECT datname FROM pg_database)")
+db_list="${db_list//\{/\[ }"
+db_list="${db_list//\}/\ ] }"
+
+echo "$db_list"
