@@ -44,16 +44,20 @@ PATH="${PATH:+${PATH}:}"$HOME"/git/lab/bash:/opt/homebrew/opt/dotnet@6/bin" # ap
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
 
 export HISTFILE=~/.histfile
-export HISTSIZE=10000
-export SAVEHIST=10000
+export HISTSIZE=25000
+export SAVEHIST=25000
 
 # ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
 
 export REPOS="$HOME/Repos"
 export GITUSER="mischavandenburg"
 export GHREPOS="$REPOS/github.com/$GITUSER"
+export DOTFILES="$GHREPOS/dotfiles"
+export LAB="$GHREPOS/lab"
 
 # ~~~~~~~~~~~~~~~ Functions ~~~~~~~~~~~~~~~~~~~~~~~~
+
+# This function is stolen from rwxrob
 
 clone() {
 	local repo="$1" user
@@ -109,8 +113,8 @@ alias ca="cd ~/git/ns/"
 alias ..="cd .."
 alias scripts="cd ~/git/lab/bash"
 alias cdblog="cd ~/websites/blog"
-alias lab="cd $REPOS/githu/lab"
-alias dot="cd ~/git/dotfiles"
+alias lab='cd $GHREPOS/lab'
+alias dot='cd $GHREPOS/dotfiles'
 
 alias c="clear"
 
