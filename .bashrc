@@ -19,7 +19,7 @@ export GITUSER="mischavandenburg"
 export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
-export SCRIPTS="$GHREPOS/lab/bash"
+export SCRIPTS="$DOTFILES/scripts"
 
 # ~~~~~~~~~~~~~~~ Path configuration ~~~~~~~~~~~~~~~~~~~~~~~~
 # function from Arch Wiki, to prevent adding directories multiple times
@@ -135,6 +135,7 @@ alias syu='sudo pacman -Syu'
 alias gp='git pull'
 alias gs='git status'
 alias ys='yadm status'
+alias lg='lazygit'
 
 # ricing
 alias et='v ~/.config/awesome/themes/powerarrow/theme-personal.lua'
