@@ -47,6 +47,35 @@ export HISTFILE=~/.histfile
 export HISTSIZE=10000
 export SAVEHIST=10000
 
+# ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
+
+export REPOS="$HOME/Repos"
+export GITUSER="mischavandenburg"
+export GHREPOS="$REPOS/github.com/$GITUSER"
+
+# ~~~~~~~~~~~~~~~ Functions ~~~~~~~~~~~~~~~~~~~~~~~~
+
+clone() {
+	local repo="$1" user
+	local repo="${repo#https://github.com/}"
+	local repo="${repo#git@github.com:}"
+	if [[ $repo =~ / ]]; then
+		user="${repo%%/*}"
+	else
+		user="$GITUSER"
+		[[ -z "$user" ]] && user="$USER"
+	fi
+	local name="${repo##*/}"
+	local userd="$REPOS/github.com/$user"
+	local path="$userd/$name"
+	[[ -d "$path" ]] && cd "$path" && return
+	mkdir -p "$userd"
+	cd "$userd"
+	echo gh repo clone "$user/$name" -- --recurse-submodule
+	gh repo clone "$user/$name" -- --recurse-submodule
+	cd "$name"
+} && export -f clone
+
 # ~~~~~~~~~~~~~~~ SSH ~~~~~~~~~~~~~~~~~~~~~~~~
 # SSH Script from arch wiki
 
@@ -76,11 +105,11 @@ alias v=nvim
 alias vim=nvim
 
 # cd
-alias ca="cd ~/git/Openstack/"
+alias ca="cd ~/git/ns/"
 alias ..="cd .."
 alias scripts="cd ~/git/lab/bash"
 alias cdblog="cd ~/websites/blog"
-alias lab="cd ~/git/lab"
+alias lab="cd $REPOS/githu/lab"
 alias dot="cd ~/git/dotfiles"
 
 alias c="clear"
