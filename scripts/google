@@ -1,0 +1,8 @@
+#!/bin/sh
+# credits to rwxrob
+url="https://google.com/search?q=$(urlencode "$*")"
+exec w3m "$url"
+#chat "$url"
+#exec lynx "https://google.com/search?q=$url"
+#useragent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.79 Safari/537.1"
+#/usr/bin/lynx "--useragent=$useragent" "google.com/search?q=$*"
