@@ -111,7 +111,7 @@ alias vim=nvim
 # cd
 alias ca="cd ~/git/ns/"
 alias ..="cd .."
-alias scripts='cd $LAB/bash'
+alias scripts='cd $SCRIPTS'
 alias cdblog="cd ~/websites/blog"
 alias lab='cd $LAB'
 alias dot='cd $GHREPOS/dotfiles'
