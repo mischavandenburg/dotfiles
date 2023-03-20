@@ -2,6 +2,11 @@
 
 # A bash script that helps me create notes in my second brain
 # based on my "blog" script
+# TODO
+# 1. check if file already exists
+# 2. write this in Go :)
+# 3. improve note formatting
+# 4.
 
 # Define a function to prompt the user for a filename
 get_filename() {
