@@ -116,6 +116,8 @@ alias cdblog="cd ~/websites/blog"
 alias lab='cd $LAB'
 alias dot='cd $GHREPOS/dotfiles'
 alias repos='cd $REPOS'
+alias gorepo='cd $REPOS/github.com/mischavandenburg/go/'
+alias ex='cd $REPOS/github.com/mischavandenburg/go/Exercism/'
 
 alias c="clear"
 
