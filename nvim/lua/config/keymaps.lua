@@ -16,3 +16,5 @@ vim.keymap.set(
 )
 
 vim.keymap.set("i", "jk", "<Esc>", { desc = "Escape jk" })
+
+vim.keymap.set("n", "<leader>d", "<cmd>r! mischadate<cr>", { desc = "Insert date" })
