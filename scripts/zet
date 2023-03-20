@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# A bash script that helps me create notes in my second brain
+# based on my "blog" script
+
+# Define a function to prompt the user for a filename
+get_filename() {
+	read -p "Enter a filename: " filename
+}
+
+# Define a function to create and open a file in the specified directory
+open_file() {
+
+	# Cd into the directory
+	cd "$1" || exit
+	# Create the file in the specified directory
+	touch "$1/$filename.md"
+
+	# Format the title by removing dashes
+	title=$filename
+	title="${title//-/ }"
+
+	# format the file
+	#
+	# create unique identifier, add title and links heading
+
+	date="$(date +"%Y%m%d%H%m")"
+
+	echo "$date" >>"$1/$filename.md"
+	echo "# " "$title" >>"$1/$filename.md"
+	echo "Links:" >>"$1/$filename.md"
+
+	# Open the file in Neovim
+	nvim "$1/$filename.md"
+}
+
+get_filename
+
+open_file "$SECOND_BRAIN/0-inbox"
