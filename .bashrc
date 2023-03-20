@@ -20,6 +20,7 @@ export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
 export SCRIPTS="$DOTFILES/scripts"
+export GOBIN="$HOME/.local/bin"
 
 # ~~~~~~~~~~~~~~~ Path configuration ~~~~~~~~~~~~~~~~~~~~~~~~
 # function from Arch Wiki, to prevent adding directories multiple times
@@ -48,7 +49,7 @@ export SCRIPTS="$DOTFILES/scripts"
 # PATH="${PATH:+${PATH}:}~/opt/bin"   # appending
 # PATH="~/opt/bin${PATH:+:${PATH}}"   # prepending
 
-PATH="${PATH:+${PATH}:}"$SCRIPTS":/opt/homebrew/opt/dotnet@6/bin" # appending
+PATH="${PATH:+${PATH}:}"$SCRIPTS":/opt/homebrew/opt/dotnet@6/bin:"$HOME"/.local/bin" # appending
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
 
 export HISTFILE=~/.histfile
