@@ -11,6 +11,7 @@ return {
         gopls = {},
         bicep = {},
         -- yamlls = {},
+        marksman = {},
       },
     },
   },
