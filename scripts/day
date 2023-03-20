@@ -1,0 +1,3 @@
+#!/bin/bash
+
+nvim "$SECOND_BRAIN""/periodic notes/daily notes/$(date +"%Y-%m-%d").md"
