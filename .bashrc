@@ -152,8 +152,8 @@ alias sb='source ~/.bashrc'
 alias s='startx'
 
 # vim & second brain
-alias cdsb=\$SECOND_BRAIN
-alias cdsb="\$SECOND_BRAIN/0-inbox/"
+alias cdsb="cd \$SECOND_BRAIN"
+alias in="cd \$SECOND_BRAIN/0-inbox/"
 alias vbn='python ~/git/python/brainfile.py'
 
 alias nb='newsboat'
