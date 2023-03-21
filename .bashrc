@@ -148,11 +148,11 @@ alias ez='v ~/.zshrc'
 alias eb='v ~/.bashrc'
 alias ev='cd ~/.config/nvim/ && v init.lua'
 alias sz='source ~/.zshrc'
-alias sb='source ~/.bashrc'
+alias sbr='source ~/.bashrc'
 alias s='startx'
 
 # vim & second brain
-alias cdsb="cd \$SECOND_BRAIN"
+alias sb="cd \$SECOND_BRAIN"
 alias in="cd \$SECOND_BRAIN/0-inbox/"
 alias vbn='python ~/git/python/brainfile.py'
 
