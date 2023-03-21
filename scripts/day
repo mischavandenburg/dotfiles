@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # TODO set up daily template
+# Maybe just copy a template file and sed the dates?
 
 cd "$SECOND_BRAIN" || exit
 

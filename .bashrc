@@ -138,7 +138,6 @@ alias syu='sudo pacman -Syu'
 # git
 alias gp='git pull'
 alias gs='git status'
-alias ys='yadm status'
 alias lg='lazygit'
 
 # ricing
@@ -153,7 +152,8 @@ alias sb='source ~/.bashrc'
 alias s='startx'
 
 # vim & second brain
-alias cdsb="cd ~/obsidian/second-brain"
+alias cdsb=\$SECOND_BRAIN
+alias cdsb="\$SECOND_BRAIN/0-inbox/"
 alias vbn='python ~/git/python/brainfile.py'
 
 alias nb='newsboat'
