@@ -112,7 +112,9 @@ if [[ -f "$XDG_CONFIG_HOME/bash/gitprompt.sh" ]]; then
 	source "$XDG_CONFIG_HOME/bash/gitprompt.sh"
 fi
 
-PROMPT_COMMAND='__git_ps1 "\u@\h:\W" " \n$ "'
+# PROMPT_COMMAND='__git_ps1 "\u@\h:\W" " \n$ "'
+# colorized prompt
+PROMPT_COMMAND='__git_ps1 "\[\e[33m\]\u\[\e[0m\]@\[\e[34m\]\h\[\e[0m\]:\[\e[35m\]\W\[\e[0m\]" " \n$ "'
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
