@@ -100,10 +100,24 @@ ssh-add -q ~/.ssh/ns
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
-if [[ -f "$XDG_CONFIG_HOME/bash/.bash-git-prompt/gitprompt.sh" ]]; then
-	export GIT_PROMPT_ONLY_IN_REPO=1
-	source "$XDG_CONFIG_HOME/bash/.bash-git-prompt/gitprompt.sh"
+# if [[ -f "$XDG_CONFIG_HOME/bash/.bash-git-prompt/gitprompt.sh" ]]; then
+# 	export GIT_PROMPT_ONLY_IN_REPO=1
+# 	source "$XDG_CONFIG_HOME/bash/.bash-git-prompt/gitprompt.sh"
+# fi
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+# Explicitly unset color (default anyhow). Use 1 to set it.
+export GIT_PS1_SHOWCOLORHINTS=1
+# export GIT_PS1_DESCRIBE_STYLE="branch"
+# export GIT_PS1_SHOWUPSTREAM="auto git"
+
+if [[ -f "$XDG_CONFIG_HOME/bash/gitprompt.sh" ]]; then
+	source "$XDG_CONFIG_HOME/bash/gitprompt.sh"
 fi
+
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
