@@ -100,11 +100,6 @@ ssh-add -q ~/.ssh/ns
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
-# if [[ -f "$XDG_CONFIG_HOME/bash/.bash-git-prompt/gitprompt.sh" ]]; then
-# 	export GIT_PROMPT_ONLY_IN_REPO=1
-# 	source "$XDG_CONFIG_HOME/bash/.bash-git-prompt/gitprompt.sh"
-# fi
-
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
@@ -117,11 +112,7 @@ if [[ -f "$XDG_CONFIG_HOME/bash/gitprompt.sh" ]]; then
 	source "$XDG_CONFIG_HOME/bash/gitprompt.sh"
 fi
 
-# PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
-# show with pwd
-# PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
-# without pwd:
-PROMPT_COMMAND='__git_ps1 "\u@\h " "\\\$ "'
+PROMPT_COMMAND='__git_ps1 "\u@\h:\W" "\\\$ "'
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
