@@ -118,7 +118,10 @@ if [[ -f "$XDG_CONFIG_HOME/bash/gitprompt.sh" ]]; then
 fi
 
 # PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
-PROMPT_COMMAND='__git_ps1 "\u@\h" "\\\$ "'
+# show with pwd
+# PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
+# without pwd:
+PROMPT_COMMAND='__git_ps1 "\u@\h " "\\\$ "'
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
