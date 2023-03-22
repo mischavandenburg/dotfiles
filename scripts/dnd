@@ -1,0 +1,4 @@
+#/bin/bash
+
+# This script toggles the Do not disturb on mac
+osascript -e 'tell application "System Events" to keystroke "d" using {command down, shift down}'
