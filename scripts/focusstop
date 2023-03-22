@@ -1,0 +1,6 @@
+#!/bin/bash
+pomo stop
+
+if [[ $(dndstatus) = "Do Not Disturb is turned On." ]]; then
+	dnd
+fi
