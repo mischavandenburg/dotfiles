@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+# PS1='[\u@\h \W]\$ '
 
 # Set to superior editing mode
 set -o vi
@@ -110,14 +110,15 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 # Explicitly unset color (default anyhow). Use 1 to set it.
 export GIT_PS1_SHOWCOLORHINTS=1
-# export GIT_PS1_DESCRIBE_STYLE="branch"
+export GIT_PS1_DESCRIBE_STYLE="branch"
 # export GIT_PS1_SHOWUPSTREAM="auto git"
 
 if [[ -f "$XDG_CONFIG_HOME/bash/gitprompt.sh" ]]; then
 	source "$XDG_CONFIG_HOME/bash/gitprompt.sh"
 fi
 
-PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+# PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+PROMPT_COMMAND='__git_ps1 "\u@\h" "\\\$ "'
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
