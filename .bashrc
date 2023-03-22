@@ -112,7 +112,7 @@ if [[ -f "$XDG_CONFIG_HOME/bash/gitprompt.sh" ]]; then
 	source "$XDG_CONFIG_HOME/bash/gitprompt.sh"
 fi
 
-PROMPT_COMMAND='__git_ps1 "\u@\h:\W" "\\\$ "'
+PROMPT_COMMAND='__git_ps1 "\u@\h:\W" " \n$ "'
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
