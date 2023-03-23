@@ -131,6 +131,7 @@ alias dot='cd $GHREPOS/dotfiles'
 alias repos='cd $REPOS'
 alias gorepo='cd $REPOS/github.com/mischavandenburg/go/'
 alias ex='cd $REPOS/github.com/mischavandenburg/go/Exercism/'
+alias rwdot='cd $REPOS/github.com/rwxrob/dot'
 
 alias c="clear"
 

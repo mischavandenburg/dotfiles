@@ -2,24 +2,26 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
-local g = vim.g
-local o = vim.o
 local opt = vim.opt
 
-o.ignorecase = true
+opt.ignorecase = true
+opt.spell = false
+
+-- pandoc
+--
+-- opt.pandoc#spell#disabled
 
 -- colorschemes
 -- require('gruvbox-material').setup()
 -- o.termguicolors = true
-g.gruvbox_material_enable_italic_comment = 1
-
+-- opt.gruvbox_material_enable_italic_comment = 1
 -- undo
 -- vim.opt.undodir = vim.fn.expand('~/.nvim/undodir')
 
 -- scrolling
--- vim.opt.relativenumber = true
-vim.opt.scrolloff = 8
-o.linebreak = true
+opt.relativenumber = false
+opt.scrolloff = 8
+opt.linebreak = true
 
 -- indentation
 
