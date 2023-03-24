@@ -5,11 +5,12 @@
 local opt = vim.opt
 
 opt.ignorecase = true
-opt.spell = false
 
--- pandoc
---
--- opt.pandoc#spell#disabled
+-- pandoc related
+
+opt.spell = false
+opt.foldmethod = "manual"
+opt.foldenable = false
 
 -- colorschemes
 -- require('gruvbox-material').setup()

@@ -27,8 +27,8 @@ vim.api.nvim_create_autocmd("filetype", {
   command = "set nospell",
 })
 
-vim.api.nvim_create_autocmd("filetype", {
-  -- group = augroup("wrap_spell"),
-  pattern = { "pandoc" },
-  command = "PandocFolding none",
-})
+-- vim.api.nvim_create_autocmd("filetype", {
+--   -- group = augroup("wrap_spell"),
+--   pattern = { "pandoc" },
+--   command = "PandocFolding none",
+-- })
