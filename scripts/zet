@@ -32,11 +32,13 @@ open_file() {
 	date="$(date +"%Y%m%d%H%m")"
 
 	echo "$date" >>"$1/$filename.md"
+	echo -en "\n" >>"$1/$filename.md"
 	echo "# " "$title" >>"$1/$filename.md"
+	echo -en "\n" >>"$1/$filename.md"
 	echo "Links:" >>"$1/$filename.md"
 
 	# Open the file in Neovim
-	nvim "$1/$filename.md"
+	nvim '+ normal Gzzo' "$1/$filename.md" -c :NoNeckPain
 }
 
 get_filename

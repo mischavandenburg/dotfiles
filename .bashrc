@@ -20,8 +20,13 @@ export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
 export SCRIPTS="$DOTFILES/scripts"
-export GOBIN="$HOME/.local/bin"
+
 export SECOND_BRAIN="$HOME/obsidian/second-brain"
+
+# Go related. In general all executables and scripts go in .local/bin
+export GOBIN="$HOME/.local/bin"
+export GOPRIVATE="github.com/$GITUSER/*,gitlab.com/$GITUSER/*"
+# export GOPATH="$HOME/.local/share/go"
 
 # ~~~~~~~~~~~~~~~ Path configuration ~~~~~~~~~~~~~~~~~~~~~~~~
 # function from Arch Wiki, to prevent adding directories multiple times
@@ -122,14 +127,14 @@ alias v=nvim
 alias vim=nvim
 
 # cd
-alias ca="cd ~/git/ns/"
+alias ns="cd $REPOS/ns/"
 alias ..="cd .."
 alias scripts='cd $SCRIPTS'
 alias cdblog="cd ~/websites/blog"
 alias lab='cd $LAB'
 alias dot='cd $GHREPOS/dotfiles'
 alias repos='cd $REPOS'
-alias gorepo='cd $REPOS/github.com/mischavandenburg/go/'
+alias cdgo='cd $GHREPOS/go/'
 alias ex='cd $REPOS/github.com/mischavandenburg/go/Exercism/'
 alias rwdot='cd $REPOS/github.com/rwxrob/dot'
 
