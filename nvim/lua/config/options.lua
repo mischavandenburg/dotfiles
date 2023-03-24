@@ -2,32 +2,27 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
-local g = vim.g
-local o = vim.o
+local opt = vim.opt
 
-o.ignorecase = true
+opt.ignorecase = true
+
+-- pandoc related
+
+opt.spell = false
+opt.foldmethod = "manual"
+opt.foldenable = false
 
 -- colorschemes
 -- require('gruvbox-material').setup()
 -- o.termguicolors = true
-g.gruvbox_material_enable_italic_comment = 1
-
+-- opt.gruvbox_material_enable_italic_comment = 1
 -- undo
 -- vim.opt.undodir = vim.fn.expand('~/.nvim/undodir')
 
 -- scrolling
--- vim.opt.relativenumber = true
-vim.opt.scrolloff = 8
-o.linebreak = true
-
--- these keep the cursor in the middle when scrolling with ctrl d and u
--- from https://github.com/ThePrimeagen/init.lua
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-
--- and these are for searching
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+opt.relativenumber = false
+opt.scrolloff = 8
+opt.linebreak = true
 
 -- indentation
 
@@ -43,3 +38,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- completion
 -- vim.o.timeoutlen = 300 -- time to wait for a mapped sequence to complete
 --
+-- g.vim_markdown_conceal = 0
+--
+--
+-- opt.vim_markdown_conceal = 0
