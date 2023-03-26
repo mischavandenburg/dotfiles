@@ -42,7 +42,7 @@ open_file() {
 	echo -en "\n" >>"$1/$filename.md"
 	echo -en "\n" >>"$1/$filename.md"
 	echo -en "\n" >>"$1/$filename.md"
-	echo "Links:" >>"$1/$filename.md"
+	echo "## Links:" >>"$1/$filename.md"
 	echo -en "\n" >>"$1/$filename.md"
 	echo "$timestamp" >>"$1/$filename.md"
 
@@ -71,6 +71,7 @@ article)
 
 reset)
 	rm -rf "$HOME/websites/blog/public"
+	cd "$HOME/websites/blog/" || exit
 	hugo
 	hugo server --disableFastRender
 	;;

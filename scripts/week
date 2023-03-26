@@ -1,0 +1,3 @@
+#!/bin/bash
+
+printf "Current week is: %i\n" "$(date +"%V")"

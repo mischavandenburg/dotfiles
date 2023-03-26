@@ -1,0 +1,3 @@
+#!/bin/bash
+# Center opens a pane to the right, because I want to have my commmand line more centered
+tmux split-pane -h \; resize-pane -x 130\; send -t 1 "clear" Enter
