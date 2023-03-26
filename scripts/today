@@ -3,7 +3,10 @@
 # TODO set up daily template
 # Maybe just copy a template file and sed the dates?
 
+# gdate -d "tomorrow" '+%Y-%m-%d'
+# gdate -d "yesterday" '+%Y-%m-%d'
+
 cd "$SECOND_BRAIN" || exit
 
 # Open the daily note at the bottom of the file in insert mode and run NoNeckPain to make it center
-nvim '+ normal Gzzo' "$SECOND_BRAIN""/periodic notes/daily notes/$(date +"%Y-%m-%d").md" -c :NoNeckPain
+# nvim '+ normal Gzzo' "$SECOND_BRAIN""/periodic notes/daily notes/$(date +"%Y-%m-%d").md" -c :NoNeckPain
