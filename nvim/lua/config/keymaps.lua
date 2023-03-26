@@ -19,7 +19,20 @@ vim.keymap.set("n", "<leader>d", "<cmd>r! mischadate<cr>", { desc = "Insert date
 -- surrounding words
 vim.keymap.set("n", "<leader>wsq", 'ciw""<Esc>P', { desc = "Word Surround Quotes" })
 
+-- replaces
 vim.keymap.set("n", "<leader>rbs", "<cmd>%s/\\//g<cr>", { desc = "Replace Backward Slash" })
+
+-- telescope symbols
+vim.keymap.set("n", "<leader>ts", "<cmd>Telesope symbols<cr>", { desc = "Telescope Symbols" })
+
+-- convert Current line to title cases
+vim.keymap.set(
+  "n",
+  "<leader>rlt",
+  "<cmd>lua require('textcase').current_word('to_title_case')<CR>",
+  { desc = "Replace Line Title" }
+)
+-- vim.keymap.set("n", "<leader>rlt", "<cmd>s/<./\u&/g<cr>", { desc = "Replace Line Title" })
 
 -- these keep the cursor in the middle when scrolling with ctrl d and u
 -- from https://github.com/ThePrimeagen/init.lua

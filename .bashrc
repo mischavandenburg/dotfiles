@@ -20,6 +20,7 @@ export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
 export SCRIPTS="$DOTFILES/scripts"
+export BROWSER="firefox"
 
 export SECOND_BRAIN="$HOME/obsidian/second-brain"
 
@@ -172,8 +173,6 @@ alias s='startx'
 alias sb="cd \$SECOND_BRAIN"
 alias in="cd \$SECOND_BRAIN/0-inbox/"
 alias vbn='python ~/git/python/brainfile.py'
-
-alias nb='newsboat'
 
 # fun
 alias fishies=asciiquarium

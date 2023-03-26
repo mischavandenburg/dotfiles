@@ -7,7 +7,15 @@ return {
   },
 
   {
-    -- "iamcco/markdown-preview.nvim",
+    "iamcco/markdown-preview.nvim",
+    -- setup = {
+    --   run = function()
+    --     vim.fn["mkdp#util#install"]()
+    --   end,
+    -- },
+  },
+  {
+    "johmsalas/text-case.nvim",
     -- setup = {
     --   run = function()
     --     vim.fn["mkdp#util#install"]()

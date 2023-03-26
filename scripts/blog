@@ -5,93 +5,93 @@
 
 # Define a function to prompt the user for a filename
 get_filename() {
-  read -p "Enter a filename: " filename
+	read -p "Enter a filename: " filename
 }
 
 # Define a function to create and open a file in the specified directory
 open_file() {
 
-  date=$(date +"%Y-%m-%d")
-  # Cd into the directory
-  cd "$1" || exit
-  # Create the file in the specified directory
-  touch "$1/$filename.md"
-  
-  # Format the title by removing dashes
-  title=$filename
-  title="${title//-/ }"
+	date=$(date +"%Y-%m-%d")
+	# Cd into the directory
+	cd "$1" || exit
+	# Create the file in the specified directory
+	touch "$1/$filename.md"
 
-  # set up the yaml frontmatter
-  echo "---" >> "$1/$filename.md"
-  echo "title: $title" >> "$1/$filename.md"
-  echo "date: $date" >> "$1/$filename.md"
-  echo "draft: true" >> "$1/$filename.md"
+	# Format the title by removing dashes
+	title=$filename
+	title="${title//-/ }"
 
-  if [[ $2 = "zet" ]]; then
-      echo "tags:" >> "$1/$filename.md"
-      echo "- Zettelkasten" >> "$1/$filename.md"
-  fi
+	# set up the yaml frontmatter
+	echo "---" >>"$1/$filename.md"
+	echo "title: $title" >>"$1/$filename.md"
+	echo "date: $date" >>"$1/$filename.md"
+	echo "draft: true" >>"$1/$filename.md"
 
-  if [[ $2 = "article" ]]; then
-      echo "tags:" >> "$1/$filename.md"
-      echo "- Article" >> "$1/$filename.md"
-  fi
+	if [[ $2 = "zet" ]]; then
+		echo "tags:" >>"$1/$filename.md"
+		echo "- Zettelkasten" >>"$1/$filename.md"
+	fi
 
-  echo "---" >> "$1/$filename.md"
+	if [[ $2 = "article" ]]; then
+		echo "tags:" >>"$1/$filename.md"
+		echo "- Article" >>"$1/$filename.md"
+	fi
 
-  # Open the file in Neovim
-  nvim "$1/$filename.md"
+	echo "---" >>"$1/$filename.md"
+
+	# Open the file in Neovim
+	nvim '+ normal Gzzo' "$1/$filename.md" -c :NoNeckPain
+
 }
 
 # Check the value of the first parameter
 case "$1" in
-  zet)
-    # Call the function to get the filename
-    get_filename
+zet)
+	# Call the function to get the filename
+	get_filename
 
-    # Call the function to create and open the file in the specified directory
-    open_file "$HOME/websites/blog/content/zet" "zet"
+	# Call the function to create and open the file in the specified directory
+	open_file "$HOME/websites/blog/content/zet" "zet"
 
-    ;;
-  article)
-    # Call the function to get the filename
-    get_filename
+	;;
+article)
+	# Call the function to get the filename
+	get_filename
 
-    # Call the function to create and open the file in the specified directory
-    open_file "$HOME/websites/blog/content/zet/articles" "article"
-    ;;
-    
-  reset)
-    rm -rf "$HOME/websites/blog/public"
-    hugo
-    hugo server --disableFastRender
-    ;;
+	# Call the function to create and open the file in the specified directory
+	open_file "$HOME/websites/blog/content/zet/articles" "article"
+	;;
 
-  pub)
-    # ask for commit message, rebuild the site, push to blog repo, then push to hosting repo
-    read -p "Enter commit message: " commitmessage 
-    cd "$HOME/websites/blog/" || exit
-    rm -rf "$HOME/websites/blog/public"
-    hugo
-    git add .
-    git commit -m "$commitmessage"
-    git push
-    rm -rf "$HOME"/git/tech-blog-hosting/* 
-    cp -r "$HOME"/websites/blog/public/* "$HOME"/git/tech-blog-hosting/ 
-    cd "$HOME"/git/tech-blog-hosting/ || exit
-    git add .
-    git commit -m "$commitmessage"
-    git push
-    ;;
+reset)
+	rm -rf "$HOME/websites/blog/public"
+	hugo
+	hugo server --disableFastRender
+	;;
 
-  "")
-    # Change to the websites/blog directory if no argument was given
-    cd "$HOME/websites/blog" || exit
-    ;;
+pub)
+	# ask for commit message, rebuild the site, push to blog repo, then push to hosting repo
+	read -p "Enter commit message: " commitmessage
+	cd "$HOME/websites/blog/" || exit
+	rm -rf "$HOME/websites/blog/public"
+	hugo
+	git add .
+	git commit -m "$commitmessage"
+	git push
+	rm -rf "$HOME"/git/tech-blog-hosting/*
+	cp -r "$HOME"/websites/blog/public/* "$HOME"/git/tech-blog-hosting/
+	cd "$HOME"/git/tech-blog-hosting/ || exit
+	git add .
+	git commit -m "$commitmessage"
+	git push
+	;;
 
-  *)
-    # Print an error message if the parameter was not "zet" or "article"
-    echo "Error: Invalid parameter. Usage: blog zet|article"
-    ;;
+"")
+	# Change to the websites/blog directory if no argument was given
+	cd "$HOME/websites/blog" || exit
+	;;
+
+*)
+	# Print an error message if the parameter was not "zet" or "article"
+	echo "Error: Invalid parameter. Usage: blog zet|article"
+	;;
 esac
-
