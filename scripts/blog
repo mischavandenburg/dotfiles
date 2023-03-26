@@ -12,6 +12,7 @@ get_filename() {
 open_file() {
 
 	date=$(date +"%Y-%m-%d")
+	timestamp="$(date +"%Y%m%d%H%m")"
 	# Cd into the directory
 	cd "$1" || exit
 	# Create the file in the specified directory
@@ -23,9 +24,9 @@ open_file() {
 
 	# set up the yaml frontmatter
 	echo "---" >>"$1/$filename.md"
-	echo "title: $title" >>"$1/$filename.md"
+	echo "title: " >>"$1/$filename.md"
 	echo "date: $date" >>"$1/$filename.md"
-	echo "draft: true" >>"$1/$filename.md"
+	#	echo "draft: true" >>"$1/$filename.md"
 
 	if [[ $2 = "zet" ]]; then
 		echo "tags:" >>"$1/$filename.md"
@@ -38,9 +39,15 @@ open_file() {
 	fi
 
 	echo "---" >>"$1/$filename.md"
+	echo -en "\n" >>"$1/$filename.md"
+	echo -en "\n" >>"$1/$filename.md"
+	echo -en "\n" >>"$1/$filename.md"
+	echo "Links:" >>"$1/$filename.md"
+	echo -en "\n" >>"$1/$filename.md"
+	echo "$timestamp" >>"$1/$filename.md"
 
 	# Open the file in Neovim
-	nvim '+ normal Gzzo' "$1/$filename.md" -c :NoNeckPain
+	nvim '+ normal 2GzzA' "$1/$filename.md" -c :NoNeckPain
 
 }
 
