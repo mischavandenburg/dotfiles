@@ -125,7 +125,7 @@ PROMPT_COMMAND='__git_ps1 "\[\e[33m\]\u\[\e[0m\]@\[\e[34m\]\h\[\e[0m\]:\[\e[35m\
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
 alias v=nvim
-alias vim=nvim
+# alias vim=nvim
 
 # cd
 alias ns="cd $REPOS/ns/"
