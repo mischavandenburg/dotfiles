@@ -21,18 +21,19 @@ open_file() {
 	# Create the file in the specified directory
 	touch "$1/$filename.md"
 
-	# format the file
 	# create unique identifier and links section
-
 	timestamp="$(date +"%Y%m%d%H%m")"
 
-	echo "# " >>"$1/$filename.md"
-	echo -en "\n" >>"$1/$filename.md"
-	echo -en "\n" >>"$1/$filename.md"
-	echo -en "\n" >>"$1/$filename.md"
-	echo "Links:" >>"$1/$filename.md"
-	echo -en "\n" >>"$1/$filename.md"
-	echo "$timestamp" >>"$1/$filename.md"
+	# format the file
+	{
+		echo "# "
+		echo -en "\n"
+		echo -en "\n"
+		echo -en "\n"
+		echo "Links:"
+		echo -en "\n"
+		echo "$timestamp"
+	} >>"$1/$filename.md"
 
 	# Open the file in Neovim
 	nvim '+ normal ggzzi' "$1/$filename.md" -c :NoNeckPain
