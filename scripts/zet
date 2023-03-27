@@ -9,6 +9,7 @@
 # function to prompt the user for a filename
 get_filename() {
 	read -p "Enter a filename: " filename
+	echo "$filename"
 }
 
 # function to create and open a file in the specified directory
@@ -39,7 +40,7 @@ open_file() {
 
 # Prompt the user if no filename is provided
 if [[ $# -eq 0 ]]; then
-	get_filename
+	filename=$(get_filename)
 fi
 
 # if more than one argument is given, print error message and stop script
@@ -50,5 +51,8 @@ if [[ $# -gt 1 ]]; then
 fi
 
 # set filename to the argument given to the script
-filename=$1
+if [[ $# -eq 1 ]]; then
+	filename=$1
+fi
+
 open_file "$SECOND_BRAIN/0-inbox"
