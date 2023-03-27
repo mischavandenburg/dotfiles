@@ -30,7 +30,7 @@ open_file() {
 
 	if [[ $2 = "zet" ]]; then
 		echo "tags:" >>"$1/$filename.md"
-		echo "- Zettelkasten" >>"$1/$filename.md"
+		echo "- " >>"$1/$filename.md"
 	fi
 
 	if [[ $2 = "article" ]]; then
