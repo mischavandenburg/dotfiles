@@ -5,15 +5,13 @@
 # TODO
 # 1. check if file already exists
 # 2. write this in Go :)
-# 3. take filename as argument and prompt if empty
-# 4.
 
-# Define a function to prompt the user for a filename
+# function to prompt the user for a filename
 get_filename() {
 	read -p "Enter a filename: " filename
 }
 
-# Define a function to create and open a file in the specified directory
+# function to create and open a file in the specified directory
 open_file() {
 
 	# Cd into the directory
@@ -42,6 +40,13 @@ open_file() {
 # Prompt the user if no filename is provided
 if [[ $# -eq 0 ]]; then
 	get_filename
+fi
+
+# if more than one argument is given, print error message and stop script
+if [[ $# -gt 1 ]]; then
+	echo "Please provide only one filename separated by dashes, without .md extension."
+	echo "Example: zet my-new-note"
+	exit 1
 fi
 
 # set filename to the argument given to the script
