@@ -1,12 +1,44 @@
 #!/bin/bash
 
-# TODO set up daily template
-# Maybe just copy a template file and sed the dates?
-
-# gdate -d "tomorrow" '+%Y-%m-%d'
-# gdate -d "yesterday" '+%Y-%m-%d'
+today=$(date +"%Y-%m-%d")
+tomorrow=$(gdate -d "tomorrow" '+%Y-%m-%d')
+yesterday=$(gdate -d "yesterday" '+%Y-%m-%d')
+file="$SECOND_BRAIN"'/periodic-notes/daily-notes/'$(date +"%Y-%m-%d").md
 
 cd "$SECOND_BRAIN" || exit
 
+new_note() {
+	touch "$file"
+
+	# Format the file with the daily template
+	cat <<EOF >"$file"
+# $today
+
+[[$yesterday]] - [[$tomorrow]]
+
+## Intention
+
+What do I want to achieve today and tomorrow?
+
+## Tracking
+
+- [ ] 1 pomodoro of go
+- [ ] Yoga  or training
+- [ ] Meditation
+- [ ] Vegan
+
+## Log
+
+EOF
+
+}
+
+# If the daily note does not exist, create a new one.
+# this uses the test command with the -f flag.
+if [ ! -f "$file" ]; then
+	echo "File does not exist, creating new daily note."
+	new_note
+fi
+
 # Open the daily note at the bottom of the file in insert mode and run NoNeckPain to make it center
-nvim '+ normal Gzzo' "$SECOND_BRAIN""/periodic notes/daily notes/$(date +"%Y-%m-%d").md" -c :NoNeckPain
+nvim '+ normal Gzzo' "$file" -c :NoNeckPain
