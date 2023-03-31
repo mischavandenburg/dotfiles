@@ -21,8 +21,8 @@ export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
 export SCRIPTS="$DOTFILES/scripts"
 export BROWSER="firefox"
-
-export SECOND_BRAIN="$HOME/obsidian/second-brain"
+export ICLOUD="$HOME/icloud"
+export SECOND_BRAIN="$HOME/second-brain"
 
 # Go related. In general all executables and scripts go in .local/bin
 export GOBIN="$HOME/.local/bin"
@@ -138,8 +138,8 @@ alias repos='cd $REPOS'
 alias cdgo='cd $GHREPOS/go/'
 alias ex='cd $REPOS/github.com/mischavandenburg/go/Exercism/'
 alias rwdot='cd $REPOS/github.com/rwxrob/dot'
-
 alias c="clear"
+alias icloud="cd \$ICLOUD"
 
 # ls
 alias ls='ls --color=auto'

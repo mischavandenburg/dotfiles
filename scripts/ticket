@@ -1,0 +1,3 @@
+#!/bin/bash
+
+gsed -i 's/\\//g' /tmp/test.md

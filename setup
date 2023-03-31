@@ -31,3 +31,13 @@ ln -sf "$PWD/newsboat/config" "$HOME"/.newsboat/config
 
 # set up blog
 # git clone git@github.com:mischavandenburg/hugo-PaperModX-theme.git themes/PaperModX --depth=1
+
+# Second Brain
+# This one's a little tricky because the path contains a space. It needs to be stored as an array,
+# and when called it needs to be quoted.
+# export SECOND_BRAIN=("/Users/mischa/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain")
+# ln -sf "$SECOND_BRAIN" ~/second-brain
+#
+# iCloud
+# export ICLOUD=("/Users/mischa/Library/Mobile Documents/com~apple~CloudDocs")
+# ln -sf "$ICLOUD" ~/icloud
