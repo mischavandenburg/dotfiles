@@ -28,6 +28,7 @@ export SECOND_BRAIN="$HOME/second-brain"
 export GOBIN="$HOME/.local/bin"
 export GOPRIVATE="github.com/$GITUSER/*,gitlab.com/$GITUSER/*"
 # export GOPATH="$HOME/.local/share/go"
+export GOPATH="$HOME/go/"
 
 # ~~~~~~~~~~~~~~~ Path configuration ~~~~~~~~~~~~~~~~~~~~~~~~
 # function from Arch Wiki, to prevent adding directories multiple times

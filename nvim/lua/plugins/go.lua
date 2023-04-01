@@ -1,0 +1,33 @@
+return {
+  -- add symbols-outline
+  -- {
+  --   "fatih/vim-go",
+  --   -- cmd = "NoNeckPain",
+  --   -- keys = { { "<leader>nn", "<cmd>NoNeckPain<cr>", desc = "[N]o [N]eckpain" } },
+  --   -- opts = {},
+  -- },
+  --
+  {
+    "mfussenegger/nvim-dap",
+  },
+  {
+    "theHamsta/nvim-dap-virtual-text",
+  },
+  {
+    "rcarriga/nvim-dap-ui",
+  },
+  {
+    "ray-x/go.nvim",
+    dependencies = { -- optional packages
+      "ray-x/guihua.lua",
+      "neovim/nvim-lspconfig",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("go").setup()
+    end,
+    event = { "CmdlineEnter" },
+    ft = { "go", "gomod" },
+    build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
+  },
+}
