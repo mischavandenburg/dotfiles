@@ -1,0 +1,41 @@
+#!/bin/bash
+
+today=$(date +"%Y-%m-%d")
+file="$SECOND_BRAIN"'/workouts/workout-'$(date +"%Y-%m-%d").md
+
+cd "$SECOND_BRAIN" || exit
+
+new_note() {
+	touch "$file"
+
+	# Format the file with the daily template
+	cat <<EOF >"$file"
+# Workout
+
+# $today
+
+# Sets
+
+1 support-hold
+2 dips
+3 baby-pullups
+4 push-up-hold
+5 scapula-pulls
+6 pushups
+7 rows
+8 knee tucks
+9 squats
+
+
+EOF
+}
+
+# If the daily note does not exist, create a new one.
+# this uses the test command with the -f flag.
+if [ ! -f "$file" ]; then
+	echo "File does not exist, creating new workout."
+	new_note
+fi
+
+# Open the daily note at the bottom of the file in insert mode and run NoNeckPain to make it center
+nvim '+ normal Gzzo' "$file" -c :NoNeckPain

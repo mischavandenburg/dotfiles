@@ -32,7 +32,8 @@ vim.api.nvim_create_autocmd("filetype", {
 --   pattern = { "pandoc" },
 --   command = "PandocFolding none",
 -- })
---
+
+-- Go related
 
 -- Run gofmt + goimport on save
 
@@ -43,4 +44,10 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     require("go.format").goimport()
   end,
   group = format_sync_grp,
+})
+
+vim.api.nvim_create_autocmd("filetype", {
+  -- group = augroup("wrap_spell"),
+  pattern = { "go" },
+  command = 'lua require("cmp").setup { enabled = true }',
 })
