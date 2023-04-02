@@ -8,7 +8,7 @@ cd "$SECOND_BRAIN" || exit
 new_note() {
 	touch "$file"
 
-	# Format the file with the daily template
+	# Format the file with the workout template
 	cat <<EOF >"$file"
 # Workout
 
@@ -30,12 +30,12 @@ new_note() {
 EOF
 }
 
-# If the daily note does not exist, create a new one.
+# If the workout note does not exist, create a new one.
 # this uses the test command with the -f flag.
 if [ ! -f "$file" ]; then
 	echo "File does not exist, creating new workout."
 	new_note
 fi
 
-# Open the daily note at the bottom of the file in insert mode and run NoNeckPain to make it center
+# Open the note at the bottom of the file in insert mode and run NoNeckPain to make it center
 nvim '+ normal Gzzo' "$file" -c :NoNeckPain
