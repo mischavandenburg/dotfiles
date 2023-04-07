@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mv "$1" "$SECOND_BRAIN/00-zettelkasten/"

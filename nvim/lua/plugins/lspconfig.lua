@@ -12,6 +12,7 @@ return {
         bicep = {},
         -- yamlls = {},
         marksman = {},
+        powershell_es = {},
       },
     },
   },
