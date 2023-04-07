@@ -4,5 +4,5 @@ return {
   { "rcarriga/nvim-notify", enabled = false },
 
   -- temporarily disabled due to empty file issue
-  { "nvim-navic", enabled = false },
+  -- { "nvim-navic", enabled = false },
 }

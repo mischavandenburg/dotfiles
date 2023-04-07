@@ -14,12 +14,4 @@ return {
     --   end,
     -- },
   },
-  {
-    "johmsalas/text-case.nvim",
-    -- setup = {
-    --   run = function()
-    --     vim.fn["mkdp#util#install"]()
-    --   end,
-    -- },
-  },
 }
