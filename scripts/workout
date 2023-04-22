@@ -1,7 +1,7 @@
 #!/bin/bash
 
 today=$(date +"%Y-%m-%d")
-file="$SECOND_BRAIN"'/workouts/workout-'$(date +"%Y-%m-%d").md
+file="$SECOND_BRAIN"'/workouts/workout-'"$today".md
 
 cd "$SECOND_BRAIN" || exit
 
@@ -31,7 +31,6 @@ EOF
 }
 
 # If the workout note does not exist, create a new one.
-# this uses the test command with the -f flag.
 if [ ! -f "$file" ]; then
 	echo "File does not exist, creating new workout."
 	new_note
