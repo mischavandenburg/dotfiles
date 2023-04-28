@@ -1,0 +1,5 @@
+#!/bin/bash
+for i in $(find . -type d -depth 1); do
+	newdir=${i#./NSCO.Workload.}
+	mv "$i" "$newdir"
+done
