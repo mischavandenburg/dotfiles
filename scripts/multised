@@ -1,0 +1,5 @@
+#!/bin/bash
+
+gsed -i '/^.*kvName/d' "$1"
+gsed -i '/^.*kvResourceGroupName/d' "$1"
+nvim "$1"
