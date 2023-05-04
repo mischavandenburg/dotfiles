@@ -3,12 +3,12 @@
 # A bash script that helps me create notes for my blog
 # by running 'blog zet' or 'blog article' a markdown file is created in the proper directory, with my chosen filename.
 
-# Define a function to prompt the user for a filename
+# get_filename prompts the user for a filename
 get_filename() {
 	read -p "Enter a filename: " filename
 }
 
-# Define a function to create and open a file in the specified directory
+# open_file creates and opens a file in the specified directory
 open_file() {
 
 	date=$(date +"%Y-%m-%d")
@@ -26,7 +26,6 @@ open_file() {
 	echo "---" >>"$1/$filename.md"
 	echo "title: " >>"$1/$filename.md"
 	echo "date: $date" >>"$1/$filename.md"
-	#	echo "draft: true" >>"$1/$filename.md"
 
 	if [[ $2 = "zet" ]]; then
 		echo "tags:" >>"$1/$filename.md"
@@ -79,6 +78,13 @@ reset)
 pub)
 	# ask for commit message, rebuild the site, push to blog repo, then push to hosting repo
 	read -p "Enter commit message: " commitmessage
+
+	read -p "Would you like to tweet that? (y/n) " will_tweet
+
+	if [[ $will_tweet == [Yy]* ]]; then
+		read -p "Enter tags, or press enter to post without tags: " tags
+	fi
+
 	cd "$HOME/websites/blog/" || exit
 	rm -rf "$HOME/websites/blog/public"
 	hugo
@@ -91,6 +97,16 @@ pub)
 	git add .
 	git commit -m "$commitmessage"
 	git push
+
+	if [[ $will_tweet == [Yy]* ]]; then
+		echo "Waiting 10 seconds to allow it to publish before tweeting."
+		sleep 10
+		if [[ $tags == "" ]]; then
+			tweet
+			exit
+		fi
+		tweet \""$tags"\"
+	fi
 	;;
 
 "")
@@ -100,6 +116,6 @@ pub)
 
 *)
 	# Print an error message if the parameter was not "zet" or "article"
-	echo "Error: Invalid parameter. Usage: blog zet|article"
+	echo "Error: Invalid parameter. Usage: blog zet|article|pub"
 	;;
 esac
