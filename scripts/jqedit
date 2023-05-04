@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# use jq for editing files in-place like sed -i
+
+filepath=$1
+query='del( .parameters.accessPolicies, .parameters.tenant, .parameters.enabledForDiskEncryption, .parameters.enableRbacAuthorization, .parameters.enableSoftDelete, .parameters.softDeleteRetentionInDays, .parameters .enabledForDeployment, .parameters.enabledForTemplateDeployment, .parameters.networkAcls, .parameters.sku )'
+output="$(jq "$query" "$filepath")"
+echo "$output" >"$filepath"
