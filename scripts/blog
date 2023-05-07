@@ -108,7 +108,7 @@ pub)
 			tweet
 			exit
 		fi
-		tweet \""$tags"\"
+		tweet "$tags"
 	fi
 	;;
 
