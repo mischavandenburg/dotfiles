@@ -1,3 +1,4 @@
 text-width 72
 browser "open -a firefox %u"
+max-items 500
 

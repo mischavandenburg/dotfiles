@@ -1,0 +1,6 @@
+#!/bin/bash
+line1='cluster_name = \"AKS20VIRTUELETREIN02100-TA\"'
+line2='cluster_resource_group_name = \"RG20VIRTUELETREIN02BASE200-STAGING\"'
+
+find . -type f -exec sh -c "echo $line1 >> {}" \;
+find . -type f -exec sh -c "echo $line2 >> {}" \;

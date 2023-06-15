@@ -50,3 +50,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- nvim go related
 vim.keymap.set("n", "<leader>gt", "<cmd>GoTest<CR>", { desc = "Go Test" })
+
+-- snippets
+
+vim.keymap.set("n", "<leader>hy", "i{{< youtube id >}}<Esc>", { desc = "Hugo Youtube" })
