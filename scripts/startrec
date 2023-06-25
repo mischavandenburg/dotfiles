@@ -1,3 +1,10 @@
 #!/bin/bash
 
 gsed -i 's/size: 25/size: 40/g' /Users/mischa/Repos/github.com/mischavandenburg/dotfiles/alacritty.yml
+
+cat <<EOF
+Recording checklist:
+- Check if microphone is on
+- Turn on Keycastr
+- Verify if recording proper screen
+EOF
