@@ -134,11 +134,12 @@ alias v=nvim
 # alias vim=nvim
 
 # cd
-alias ns="cd $REPOS/ns/"
+alias ns='cd $REPOS/ns/'
 alias ..="cd .."
 alias scripts='cd $SCRIPTS'
 alias cdblog="cd ~/websites/blog"
 alias lab='cd $LAB'
+alias alab='cd $GHREPOS/azure-lab'
 alias dot='cd $GHREPOS/dotfiles'
 alias repos='cd $REPOS'
 alias cdgo='cd $GHREPOS/go/'
