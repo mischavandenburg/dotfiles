@@ -35,7 +35,7 @@ ln -sf "$PWD/newsboat/urls" "$HOME"/.newsboat/urls
 # Second Brain
 # This one's a little tricky because the path contains a space. It needs to be stored as an array,
 # and when called it needs to be quoted.
-# export SECOND_BRAIN=("/Users/mischa/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain")
+# export SECOND_BRAIN=("/Users/mischa/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain-01-07-23")
 # ln -sf "$SECOND_BRAIN" ~/second-brain
 #
 # iCloud
