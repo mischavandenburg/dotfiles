@@ -1,5 +1,18 @@
 #!/bin/bash
 
-touch $1
-chmod +x $1
-echo "#!/bin/bash" > $1
+# creates a new script in my scripts collection
+
+# check if script name is provided
+
+name=$1
+
+if [ $# -eq 0 ]; then
+	# ask for name of script
+	echo "Please provide a name for the script"
+	read -r name
+fi
+
+cd "$SCRIPTS" || exit
+touch "$name"
+chmod +x "$name"
+echo "#!/bin/bash" >"$name"
