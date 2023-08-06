@@ -30,6 +30,9 @@ export GOPRIVATE="github.com/$GITUSER/*,gitlab.com/$GITUSER/*"
 # export GOPATH="$HOME/.local/share/go"
 export GOPATH="$HOME/go/"
 
+# dotnet
+export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
+
 # ~~~~~~~~~~~~~~~ Path configuration ~~~~~~~~~~~~~~~~~~~~~~~~
 # function from Arch Wiki, to prevent adding directories multiple times
 
@@ -61,7 +64,7 @@ export GOPATH="$HOME/go/"
 # If you need to use these commands with their normal names, you can add a "gnubin" directory to your PATH with:
 #  PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 
-PATH="${PATH:+${PATH}:}"$SCRIPTS":/opt/homebrew/opt/dotnet@6/bin:"$HOME"/.local/bin" # appending
+PATH="${PATH:+${PATH}:}"$SCRIPTS":/opt/homebrew/opt/dotnet@6/bin:/opt/homebrew/opt/dotnet/bin:"$HOME"/.local/bin:"$HOME"/.dotnet/tools" # appending
 
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
 

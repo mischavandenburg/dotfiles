@@ -3,6 +3,8 @@
 # A bash script that helps me create notes for my blog
 # by running 'blog zet' or 'blog article' a markdown file is created in the proper directory, with my chosen filename.
 
+HOSTING_REPO="$REPOS/github.com/mischavandenburg/tech-blog-hosting/"
+
 # get_filename prompts the user for a filename
 get_filename() {
 	read -p "Enter a filename: " filename
@@ -94,9 +96,9 @@ pub)
 	git add .
 	git commit -m "$commitmessage"
 	git push
-	rm -rf "$HOME"/git/tech-blog-hosting/*
-	cp -r "$HOME"/websites/blog/public/* "$HOME"/git/tech-blog-hosting/
-	cd "$HOME"/git/tech-blog-hosting/ || exit
+	rm -rf "$HOSTING_REPO*"
+	cp -r "$HOME"/websites/blog/public/* "$HOSTING_REPO"
+	cd "$HOSTING_REPO" || exit
 	git add .
 	git commit -m "$commitmessage"
 	git push
