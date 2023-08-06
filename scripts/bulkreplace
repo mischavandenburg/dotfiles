@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# execute sed command on every file in the directory recursively
+
+old="azure-kubernetes-service\/v3.0"
+new="azure-kubernetes-service\/v4.0"
+
+find . -type f -name "*.yml" -exec gsed -i "s/$old/$new/g" {} \;
