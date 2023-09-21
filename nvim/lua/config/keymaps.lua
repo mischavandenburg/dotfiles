@@ -28,7 +28,7 @@ vim.keymap.set("n", "<leader>wsq", 'ciw""<Esc>P', { desc = "Word Surround Quotes
 vim.keymap.set("n", "<leader>rbs", "<cmd>%s/\\//g<CR>", { desc = "Replace Backward Slash" })
 
 -- telescope symbols
-vim.keymap.set("n", "<leader>ts", "<cmd>Telescope symbols<cr>", { desc = "Telescope Symbols" })
+vim.keymap.set("n", "<leader>fs", "<cmd>Telescope symbols<cr>", { desc = "Find Symbols" })
 
 -- convert Current line to title cases
 vim.keymap.set(
