@@ -150,6 +150,7 @@ alias ex='cd $REPOS/github.com/mischavandenburg/go/Exercism/'
 alias rwdot='cd $REPOS/github.com/rwxrob/dot'
 alias c="clear"
 alias icloud="cd \$ICLOUD"
+alias rob='cd $REPOS/github.com/rwxrob'
 
 # ls
 alias ls='ls --color=auto'
