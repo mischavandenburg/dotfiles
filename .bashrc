@@ -112,6 +112,7 @@ fi
 # ssh-add -q ~/.ssh/mburg
 ssh-add -q ~/.ssh/id_ed25519
 ssh-add -q ~/.ssh/ns
+ssh-add -q ~/.ssh/vanoord
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 

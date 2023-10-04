@@ -13,6 +13,9 @@ mkdir -p "$XDG_CONFIG_HOME"/bash
 mkdir -p "$XDG_CONFIG_HOME"/alacritty
 mkdir -p "$XDG_CONFIG_HOME"/skhd
 
+# ubuntu packages
+# ripgrep gh
+
 # set up git prompt
 # curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh >"$XDG_CONFIG_HOME"/bash/git-prompt.sh
 
