@@ -110,14 +110,16 @@ fi
 # Only run on Ubuntu
 
 if [[ $(grep -E "^(ID|NAME)=" /etc/os-release | grep -q "ubuntu")$? == 0 ]]; then
-	eval "$(ssh-agent -s)" > /dev/null
+	eval "$(ssh-agent -s)" >/dev/null
 fi
 
 # adding keys was buggy, add them outside of the script for now
 # ssh-add -q ~/.ssh/mischa
 # ssh-add -q ~/.ssh/mburg
-ssh-add -q ~/.ssh/id_ed25519
-ssh-add -q ~/.ssh/vanoord
+{
+	ssh-add -q ~/.ssh/id_ed25519
+	ssh-add -q ~/.ssh/vanoord
+} &>/dev/null
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -221,12 +223,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 	# brew bash completion
 	[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 else
-#	source /usr/share/fzf/key-bindings.bash
-#	source /usr/share/fzf/completion.bash
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+	#	source /usr/share/fzf/key-bindings.bash
+	#	source /usr/share/fzf/completion.bash
+	[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 fi
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/mischa/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
