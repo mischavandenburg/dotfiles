@@ -107,12 +107,19 @@ if [[ ! "$SSH_AUTH_SOCK" ]]; then
 	source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
+# Only run on Ubuntu
+
+if [[ $(grep -E "^(ID|NAME)=" /etc/os-release | grep -q "ubuntu")$? == 0 ]]; then
+		eval "$(ssh-agent -s)"
+fi
+
 # adding keys was buggy, add them outside of the script for now
 # ssh-add -q ~/.ssh/mischa
 # ssh-add -q ~/.ssh/mburg
 ssh-add -q ~/.ssh/id_ed25519
 ssh-add -q ~/.ssh/ns
 ssh-add -q ~/.ssh/vanoord
+ 
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
