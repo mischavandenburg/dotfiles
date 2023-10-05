@@ -1,11 +1,22 @@
 #!/bin/bash
 
-# brew packages to install
-# amethyst
+# This is the setup script for my config. The idea is to be able to run
+# this after cloning the repo on a Mac or Ubuntu (WSL) system and be up
+# and running very quickly.
+
+# brew packages Mac
+# amethyst fzf nvim exa hugo bash-completion@2 newsboat
+
+# ubuntu packages apt
+# ripgrep gh
+
+# ubuntu brew
 # fzf
-# nvim exa hugo
-# bash-completion@2
-# newsboat
+
+# Ubuntu specific notes
+# create symbolic link to neovim to vim. Currently not using neovim on
+# Ubuntu systems but I use the v alias everywhere.
+
 
 # create directories
 export XDG_CONFIG_HOME="$HOME"/.config
@@ -13,10 +24,6 @@ mkdir -p "$XDG_CONFIG_HOME"/bash
 mkdir -p "$XDG_CONFIG_HOME"/alacritty
 mkdir -p "$XDG_CONFIG_HOME"/skhd
 mkdir -p "$XDG_CONFIG_HOME"/wezterm
-
-
-# ubuntu packages
-# ripgrep gh
 
 # set up git prompt
 curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh >"$XDG_CONFIG_HOME"/bash/git-prompt.sh

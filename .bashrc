@@ -222,10 +222,12 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 	# brew bash completion
 	[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 else
-	source /usr/share/fzf/key-bindings.bash
-	source /usr/share/fzf/completion.bash
+#	source /usr/share/fzf/key-bindings.bash
+#	source /usr/share/fzf/completion.bash
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 fi
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/mischa/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
