@@ -22,7 +22,7 @@ export LAB="$GHREPOS/lab"
 export SCRIPTS="$DOTFILES/scripts"
 export BROWSER="firefox"
 export ICLOUD="$HOME/icloud"
-export SECOND_BRAIN="$GHREPOS/second-brain"
+export SECOND_BRAIN="$HOME/second-brain"
 
 # Go related. In general all executables and scripts go in .local/bin
 export GOBIN="$HOME/.local/bin"
@@ -110,7 +110,7 @@ fi
 # Only run on Ubuntu
 
 if [[ $(grep -E "^(ID|NAME)=" /etc/os-release | grep -q "ubuntu")$? == 0 ]]; then
-		eval "$(ssh-agent -s)"
+	eval "$(ssh-agent -s)"
 fi
 
 # adding keys was buggy, add them outside of the script for now
@@ -119,7 +119,6 @@ fi
 ssh-add -q ~/.ssh/id_ed25519
 ssh-add -q ~/.ssh/ns
 ssh-add -q ~/.ssh/vanoord
- 
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
