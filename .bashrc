@@ -145,7 +145,7 @@ alias v=nvim
 # alias vim=nvim
 
 # cd
-alias ns='cd $REPOS/ns/'
+alias vo='cd $REPOS/github.com/vanoord/'
 alias ..="cd .."
 alias scripts='cd $SCRIPTS'
 alias cdblog="cd ~/websites/blog"
@@ -233,5 +233,5 @@ export PATH="/Users/mischa/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
