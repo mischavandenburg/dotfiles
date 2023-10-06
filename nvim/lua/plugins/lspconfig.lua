@@ -13,7 +13,7 @@ return {
         -- yamlls = {},
         marksman = {},
         powershell_es = {},
-        azure_pipelines_ls = {},
+        -- azure_pipelines_ls = {},
         terraformls = {},
       },
     },
