@@ -8,15 +8,24 @@
 # amethyst fzf nvim exa hugo bash-completion@2 newsboat kubectl
 
 # ubuntu packages apt
-# ripgrep gh
+# ripgrep gh 
+
+# ubuntu apt neovim setup
+# gcc g++ unzip
 
 # ubuntu brew
-# fzf kubectl
+# fd fzf kubectl 
+
+# ubuntu brew for neovim setup
+# neovim go lazygit npm
 
 # ubuntu specific notes
-# create symbolic link to neovim from vim. Currently not using neovim on
-# Ubuntu systems but I use the v alias everywhere.
+# create symbolic link to neovim from vim. when not using neovim on
+# Ubuntu systems, because I use the v alias everywhere.
 # sudo ln -sf /usr/bin/vim /usr/bin/nvim
+
+# ubuntu neovim setup
+# there is an issue with npm on wsl 22. Use this to install npm: https://stackoverflow.com/questions/73673804/npm-show-npm-elf-not-found-error-in-wsl
 
 # create directories
 export XDG_CONFIG_HOME="$HOME"/.config
