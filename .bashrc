@@ -116,10 +116,10 @@ fi
 # adding keys was buggy, add them outside of the script for now
 # ssh-add -q ~/.ssh/mischa
 # ssh-add -q ~/.ssh/mburg
-{
-	ssh-add -q ~/.ssh/id_ed25519
-	ssh-add -q ~/.ssh/vanoord
-} &>/dev/null
+#{
+ssh-add -q ~/.ssh/id_ed25519
+ssh-add -q ~/.ssh/vanoord
+#} &>/dev/null
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -145,7 +145,7 @@ alias v=nvim
 # alias vim=nvim
 
 # cd
-alias vo='cd $REPOS/github.com/vanoord/'
+alias vo='cd $REPOS/github.com/VanOord/'
 alias ..="cd .."
 alias scripts='cd $SCRIPTS'
 alias cdblog="cd ~/websites/blog"
