@@ -66,6 +66,8 @@ export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
 
 PATH="${PATH:+${PATH}:}"$SCRIPTS":/opt/homebrew/opt/dotnet@6/bin:/opt/homebrew/opt/dotnet/bin:"$HOME"/.local/bin:"$HOME"/.dotnet/tools" # appending
 
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
 
 export HISTFILE=~/.histfile
@@ -204,6 +206,8 @@ alias k='kubectl'
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
 alias kgp='kubectl get pods'
+alias kc='kubectx'
+alias kn='kubens'
 
 # env variables
 export VISUAL=nvim
