@@ -198,6 +198,9 @@ alias sb="cd \$SECOND_BRAIN"
 alias in="cd \$SECOND_BRAIN/0-inbox/"
 alias vbn='python ~/git/python/brainfile.py'
 
+# starting programmes
+alias cards='python3 /opt/homebrew/lib/python3.11/site-packages/mtg_proxy_printer/'
+
 # fun
 alias fishies=asciiquarium
 
