@@ -212,6 +212,8 @@ alias kgp='kubectl get pods'
 alias kc='kubectx'
 alias kn='kubens'
 
+alias argosec='k get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -D | pbcopy'
+
 # env variables
 export VISUAL=nvim
 export EDITOR=nvim
