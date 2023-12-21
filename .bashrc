@@ -151,6 +151,7 @@ alias vo='cd $REPOS/github.com/VanOord/'
 alias ..="cd .."
 alias scripts='cd $SCRIPTS'
 alias cdblog="cd ~/websites/blog"
+alias cdpblog='cd $SECOND_BRAIN/2-areas/blog/content'
 alias lab='cd $LAB'
 alias alab='cd $GHREPOS/azure-lab'
 alias dot='cd $GHREPOS/dotfiles'

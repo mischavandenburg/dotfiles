@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd "$SECOND_BRAIN"/2-areas/blog/content || exit
+
+read -rp "Enter a filename: " filename
+
+nvim '+ normal 2GzzA' "$filename.md" -c :NoNeckPain
