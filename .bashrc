@@ -201,6 +201,9 @@ alias vbn='python ~/git/python/brainfile.py'
 # starting programmes
 alias cards='python3 /opt/homebrew/lib/python3.11/site-packages/mtg_proxy_printer/'
 
+# terraform
+alias tp='terraform plan'
+
 # fun
 alias fishies=asciiquarium
 
