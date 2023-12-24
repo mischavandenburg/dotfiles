@@ -84,7 +84,7 @@ pub)
 	# ask for commit message, rebuild the site, push to blog repo, then push to hosting repo
 	read -p "Enter commit message: " commitmessage
 
-	read -p "Would you like to tweet that? (y/n) " will_tweet
+	read -p "Would you like to tweet + toot that? (y/n) " will_tweet
 
 	if [[ $will_tweet == [Yy]* ]]; then
 		read -p "Enter tags, or press enter to post without tags: " tags
@@ -106,11 +106,15 @@ pub)
 	if [[ $will_tweet == [Yy]* ]]; then
 		echo "Waiting 10 seconds to allow it to publish before tweeting."
 		sleep 10
+
+		# post to twitter/mastodon without tags
 		if [[ $tags == "" ]]; then
 			tweet
+			toot
 			exit
 		fi
 		tweet "$tags"
+		toot "$tags"
 	fi
 	;;
 
