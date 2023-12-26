@@ -162,6 +162,7 @@ alias rwdot='cd $REPOS/github.com/rwxrob/dot'
 alias c="clear"
 alias icloud="cd \$ICLOUD"
 alias rob='cd $REPOS/github.com/rwxrob'
+alias homelab='cd $REPOS/github.com/mischavandenburg/homelab/'
 
 # ls
 alias ls='ls --color=auto'
@@ -215,6 +216,9 @@ complete -o default -F __start_kubectl k
 alias kgp='kubectl get pods'
 alias kc='kubectx'
 alias kn='kubens'
+
+# flux
+source <(flux completion bash)
 
 alias argosec='k get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -D | pbcopy'
 
