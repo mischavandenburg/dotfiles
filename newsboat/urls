@@ -1,6 +1,11 @@
 # https://feeds.nos.nl/nosnieuwsalgemeen
 https://feeds.nos.nl/nosnieuwstech
+
+# Azure
 https://azurecomcdn.azureedge.net/en-us/updates/feed/?query=AKS
+https://www.thomasmaurer.ch/feed/
+
+
 https://mischavandenburg.com/index.xml
 # https://rss.art19.com/the-daily-stoic
 # http://feeds.feedburner.com/tweakers/mixed
@@ -10,9 +15,10 @@ https://d-s.sh/index.xml
 # https://bearblog.dev/discover/feed/
 https://herman.bearblog.dev/feed/
 # https://tiramisu.bearblog.dev/feed/
-http://feeds2.feedburner.com/TheArtOfManliness
+# http://feeds2.feedburner.com/TheArtOfManliness
 # http://feeds.kottke.org/main
 # https://hnrss.org/frontpage
+
 # https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=-6703547290918904864&board=AzureObservabilityBlog&size=25
 # https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=-6703547290918904864&board=AzureDevOps&size=25
 # https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=-7983553314665870282&board=AzureNetworkingBlog&size=25

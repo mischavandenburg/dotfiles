@@ -14,13 +14,16 @@ set -o vi
 bind -x '"\C-l":clear'
 # ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
 
+# config
+export BROWSER="firefox"
+
+# directories
 export REPOS="$HOME/Repos"
 export GITUSER="mischavandenburg"
 export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
 export SCRIPTS="$DOTFILES/scripts"
-export BROWSER="firefox"
 export ICLOUD="$HOME/icloud"
 export SECOND_BRAIN="$HOME/second-brain"
 
@@ -73,6 +76,7 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export HISTFILE=~/.histfile
 export HISTSIZE=25000
 export SAVEHIST=25000
+export HISTCONTROL=ignorespace
 
 # ~~~~~~~~~~~~~~~ Functions ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -163,6 +167,7 @@ alias c="clear"
 alias icloud="cd \$ICLOUD"
 alias rob='cd $REPOS/github.com/rwxrob'
 alias homelab='cd $REPOS/github.com/mischavandenburg/homelab/'
+alias hl='homelab'
 
 # ls
 alias ls='ls --color=auto'
@@ -219,8 +224,7 @@ alias kn='kubens'
 
 # flux
 source <(flux completion bash)
-
-alias argosec='k get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -D | pbcopy'
+alias fgk='flux get kustomizations'
 
 # env variables
 export VISUAL=nvim
