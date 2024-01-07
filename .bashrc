@@ -226,6 +226,10 @@ alias kn='kubens'
 source <(flux completion bash)
 alias fgk='flux get kustomizations'
 
+# talos
+
+source <(talosctl completion bash)
+
 # env variables
 export VISUAL=nvim
 export EDITOR=nvim
