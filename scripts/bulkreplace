@@ -2,11 +2,11 @@
 
 # execute sed command on every file in the directory recursively
 
-old='daysAfterCreationGreaterThan": 1'
-new='daysAfterCreationGreaterThan": 7'
+old='mealie'
+new='linkding'
 
 # yml
-# find . -type f -name "*.yml" -exec gsed -i "s/$old/$new/g" {} \;
+find . -type f -name "*.yaml" -exec gsed -i "s/$old/$new/g" {} \;
 
 # jsonc
-find . -type f -name "*.jsonc" -exec gsed -i "s/$old/$new/g" {} \;
+# find . -type f -name "*.jsonc" -exec gsed -i "s/$old/$new/g" {} \;
