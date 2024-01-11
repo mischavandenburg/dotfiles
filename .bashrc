@@ -168,6 +168,9 @@ alias icloud="cd \$ICLOUD"
 alias rob='cd $REPOS/github.com/rwxrob'
 alias homelab='cd $REPOS/github.com/mischavandenburg/homelab/'
 alias hl='homelab'
+alias hlp='cd $REPOS/github.com/mischavandenburg/homelab-private/'
+alias hlps='cd $REPOS/github.com/mischavandenburg/homelab-private-staging/'
+alias hlpp='cd $REPOS/github.com/mischavandenburg/homelab-private-production/'
 
 # ls
 alias ls='ls --color=auto'
@@ -222,13 +225,18 @@ alias kgp='kubectl get pods'
 alias kc='kubectx'
 alias kn='kubens'
 
+alias kcs='kubectl config use-context admin@homelab-staging'
+alias kcp='kubectl config use-context admin@homelab-production'
+
 # flux
 source <(flux completion bash)
 alias fgk='flux get kustomizations'
 
 # talos
-
 source <(talosctl completion bash)
+
+# EDB
+source <(kubectl cnp completion bash)
 
 # env variables
 export VISUAL=nvim
