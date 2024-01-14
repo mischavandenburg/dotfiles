@@ -2,14 +2,18 @@
 
 # execute sed command on every file in the directory recursively
 
-old='\"editable\": false'
-new='\"editable\": true'
+# old='\"editable\": false'
+# new='\"editable\": true'
+old='alacritty.toml'
+new='alacritty.toml'
 
 # yaml
 # find . -type f -name "*.yaml" -exec gsed -i "s/$old/$new/g" {} \;
 
 # json
-find . -type f -name "*.json" -exec gsed -i "s/$old/$new/g" {} \;
+# find . -type f -name "*.json" -exec gsed -i "s/$old/$new/g" {} \;
 
 # jsonc
 # find . -type f -name "*.jsonc" -exec gsed -i "s/$old/$new/g" {} \;
+#
+find . -type f -exec gsed -i "s/$old/$new/g" {} \;

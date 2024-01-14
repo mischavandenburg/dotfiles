@@ -1,6 +1,6 @@
 #!/bin/bash
 
-gsed -i 's/size: 25/size: 35/g' /Users/mischa/Repos/github.com/mischavandenburg/dotfiles/alacritty.yml
+gsed -i 's/size = 25/size = 35/g' /Users/mischa/Repos/github.com/mischavandenburg/dotfiles/alacritty.toml
 
 cat <<EOF
 Recording checklist:
