@@ -1,0 +1,14 @@
+import = ["/Users/mischa/.config/alacritty/themes/themes/gruvbox_dark.toml"]
+
+[font]
+size = 25
+
+[font.normal]
+family = "UbuntuMono Nerd Font"
+
+[window]
+decorations = "none"
+
+[window.padding]
+x = 7
+y = 0
