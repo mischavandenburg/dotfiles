@@ -41,7 +41,7 @@ curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-
 # Symbolic links
 
 # ln -s ./.amethyst.yml "$HOME"/.amethyst.yml
-ln -sf "$PWD/alacritty.yml" "$XDG_CONFIG_HOME"/alacritty/alacritty.yml
+ln -sf "$PWD/alacritty.toml" "$XDG_CONFIG_HOME"/alacritty/alacritty.toml
 ln -sf "$PWD/k9s/skin.yml" "$XDG_CONFIG_HOME"/k9s/skin.yml
 ln -sf "$PWD/.bash_profile" "$HOME"/.bash_profile
 ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
