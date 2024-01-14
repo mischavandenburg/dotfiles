@@ -236,7 +236,10 @@ alias fgk='flux get kustomizations'
 source <(talosctl completion bash)
 
 # EDB
-source <(kubectl cnp completion bash)
+source <(kubectl-cnp completion bash)
+
+# cilium
+source <(cilium completion bash)
 
 # env variables
 export VISUAL=nvim
