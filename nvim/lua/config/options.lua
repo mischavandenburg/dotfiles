@@ -46,3 +46,5 @@ opt.linebreak = true
 --
 --
 -- opt.vim_markdown_conceal = 0
+--
+vim.g.mkdp_browser = "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge"
