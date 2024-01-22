@@ -4,8 +4,8 @@
 
 # old='\"editable\": false'
 # new='\"editable\": true'
-old='alacritty.toml'
-new='alacritty.toml'
+old='|calico-system|sysdig-agent'
+new='|calico-system'
 
 # yaml
 # find . -type f -name "*.yaml" -exec gsed -i "s/$old/$new/g" {} \;
