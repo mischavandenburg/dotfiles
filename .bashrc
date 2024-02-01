@@ -137,9 +137,9 @@ export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_DESCRIBE_STYLE="branch"
 # export GIT_PS1_SHOWUPSTREAM="auto git"
 
-if [[ -f "$XDG_CONFIG_HOME/bash/gitprompt.sh" ]]; then
-	source "$XDG_CONFIG_HOME/bash/gitprompt.sh"
-fi
+# if [[ -f "$XDG_CONFIG_HOME/bash/gitprompt.sh" ]]; then
+# 	source "$XDG_CONFIG_HOME/bash/gitprompt.sh"
+# fi
 
 # PROMPT_COMMAND='__git_ps1 "\u@\h:\W" " \n$ "'
 # colorized prompt
