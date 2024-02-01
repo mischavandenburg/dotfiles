@@ -1,3 +1,5 @@
+# themes from https://github.com/alacritty/alacritty-theme
+
 import = ["/Users/mischa/.config/alacritty/themes/themes/gruvbox_dark.toml"]
 
 [font]
