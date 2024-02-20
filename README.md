@@ -6,6 +6,16 @@ The intention is to be able to run  a setup script after cloning the repo on a M
 
 # Setup Notes
 
+## Ubuntu
+
+```bash
+DOTFILES_DIR=$HOME/Repos/github.com/mischavandenburg
+mkdir -p $DOTFILES_DIR
+cd $DOTFILES_DIR
+git clone https://github.com/mischavandenburg/dotfiles.git
+cd dotfiles
+```
+
 ## Windows and WSL setup
 
 * Install WSL in powershell 
@@ -18,3 +28,6 @@ The above command only works if WSL is not installed at all, if you run wsl --in
 * Get gruvbox-material color scheme for Windows Terminal. 
 * Open the settings.json in windows preview by opening a new tab and click on Settings while holding shift
 * Paste in the colorschemes and asssign it to the Ubuntu profile in Windows Terminal
+
+There is an issue with npm on wsl ubuntu 22. Use this to install npm: https://stackoverflow.com/questions/73673804/npm-show-npm-elf-not-found-error-in-wsl
+

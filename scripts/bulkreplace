@@ -4,8 +4,8 @@
 
 # old='\"editable\": false'
 # new='\"editable\": true'
-old='How to Take Smart Notes11'
-new='How to Take Smart Notes'
+old='#video'
+new='#Video'
 
 # yaml
 # find . -type f -name "*.yaml" -exec gsed -i "s/$old/$new/g" {} \;
