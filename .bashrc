@@ -184,7 +184,6 @@ alias la='ls -lathr'
 alias last='find . -type f -not -path "*/\.*" -exec ls -lrt {} +'
 
 alias sv='sudoedit'
-alias sk='killall ssh-agent && source ~/.zshrc'
 alias t='tmux'
 alias e='exit'
 alias syu='sudo pacman -Syu'
@@ -198,16 +197,14 @@ alias lg='lazygit'
 alias et='v ~/.config/awesome/themes/powerarrow/theme-personal.lua'
 alias ett='v ~/.config/awesome/themes/powerarrow-dark/theme-personal.lua'
 alias er='v ~/.config/awesome/rc.lua'
-alias ez='v ~/.zshrc'
 alias eb='v ~/.bashrc'
 alias ev='cd ~/.config/nvim/ && v init.lua'
-alias sz='source ~/.zshrc'
 alias sbr='source ~/.bashrc'
 alias s='startx'
 
 # vim & second brain
 alias sb="cd \$SECOND_BRAIN"
-alias in="cd \$SECOND_BRAIN/0-inbox/"
+alias in="cd \$SECOND_BRAIN/0 Inbox/"
 alias vbn='python ~/git/python/brainfile.py'
 
 # starting programmes
