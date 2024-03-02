@@ -14,6 +14,9 @@ set -o vi
 bind -x '"\C-l":clear'
 # ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
 
+export VISUAL=nvim
+export EDITOR=nvim
+
 # config
 export BROWSER="firefox"
 
@@ -240,10 +243,6 @@ source <(kubectl-cnp completion bash)
 
 # cilium
 source <(cilium completion bash)
-
-# env variables
-export VISUAL=nvim
-export EDITOR=nvim
 
 # fzf aliases
 # use fp to do a fzf search and preview the files
