@@ -140,15 +140,13 @@ export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_DESCRIBE_STYLE="branch"
 # export GIT_PS1_SHOWUPSTREAM="auto git"
 
-# if [[ -f "$XDG_CONFIG_HOME/bash/gitprompt.sh" ]]; then
-# 	source "$XDG_CONFIG_HOME/bash/gitprompt.sh"
-# fi
+if [[ -f "/Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh" ]]; then
+	source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+fi
 
 # PROMPT_COMMAND='__git_ps1 "\u@\h:\W" " \n$ "'
 # colorized prompt
 PROMPT_COMMAND='__git_ps1 "\[\e[33m\]\u\[\e[0m\]@\[\e[34m\]\h\[\e[0m\]:\[\e[35m\]\W\[\e[0m\]" " \n$ "'
-
-# The __git_ps1 function prompt is provided by the bash completion installed by brew. See https://github.com/mischavandenburg/dotfiles/issues/5
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -259,6 +257,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
 	# brew bash completion
 	[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+
+	# git completion for macos
+	[[ -r "/Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash" ]] && . "/Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash"
 else
 	#	source /usr/share/fzf/key-bindings.bash
 	#	source /usr/share/fzf/completion.bash
