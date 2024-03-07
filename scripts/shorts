@@ -4,7 +4,11 @@ gsed -i 's/size = 25/size = 55/g' /users/mischa/repos/github.com/mischavandenbur
 clear
 
 # split pane and set to correct width on 4k screen
-tmux split-pane -h \; select-pane -l \; resize-pane -x 35
+# tmux split-pane -h \; select-pane -l \; resize-pane -x 35
+tmux split-pane -h \; select-pane -l \; resize-pane -x 54
+
+# Use this command to get the current pane width:
+# tmux display-message -p '#{pane_width}'
 
 echo "Remember to leave some room at the top in vim"
 
