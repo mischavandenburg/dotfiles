@@ -176,6 +176,7 @@ alias hl='homelab'
 alias hlp='cd $REPOS/github.com/mischavandenburg/homelab-private/'
 alias hlps='cd $REPOS/github.com/mischavandenburg/homelab-private-staging/'
 alias hlpp='cd $REPOS/github.com/mischavandenburg/homelab-private-production/'
+alias skool='cd $REPOS/github.com/mischavandenburg/skool/kubernetes-fundamentals'
 
 # ls
 alias ls='ls --color=auto'
