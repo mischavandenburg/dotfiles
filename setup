@@ -15,9 +15,6 @@ mkdir -p "$XDG_CONFIG_HOME"/k9s
 
 git clone https://github.com/alacritty/alacritty-theme "$XDG_CONFIG_HOME"/alacritty/themes
 
-# set up git prompt
-# curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh >"$XDG_CONFIG_HOME"/bash/git-prompt.sh
-
 # Symbolic links
 
 # ln -s ./.amethyst.yml "$HOME"/.amethyst.yml
@@ -55,10 +52,10 @@ ln -sf "$PWD/newsboat/urls" "$HOME"/.newsboat/urls
 brew install --cask alacritty
 
 # brew packages Mac
-# amethyst fzf nvim exa hugo bash-completion@2 newsboat kubectl
+# amethyst fzf nvim exa hugo bash-completion@2 newsboat kubectl starship
 
 # ubuntu packages apt
-sudo apt install ripgrep gh
+sudo apt install ripgrep gh starship
 
 # ubuntu apt neovim setup
 sudo apt install gcc g++ unzip
