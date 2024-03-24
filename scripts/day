@@ -16,19 +16,20 @@ new_note() {
 
 [[$yesterday]] - [[$tomorrow]]
 
-## Intention
+## Habits
 
-What do I want to achieve today and tomorrow?
+- [ ] A healthy breakfast
+- [ ] Writing my daily tasks
+- [ ] Write at least one line of code
+- [ ] Contribute to the community
+- [ ] Exercise for at least 20 minutes
+- [ ] Tidy up
 
-## Tracking
-
-- [ ] Calories tracked
-- [ ] Run
-- [ ] Yoga or strength training
-- [ ] Meditation
-- [ ] Answer 1 question from steps
+- [ ] Calorie logging
+- [ ] Yoga
+- [ ] Bedtime routine
 - [ ] Skin routine
-- [ ] Oral routine
+- [ ] CKS Katas - RBAC & Network Policies
 
 ## Log
 EOF
