@@ -21,7 +21,7 @@ open_file() {
 	touch "$1/$filename.md"
 
 	# create unique identifier and links section
-	timestamp="$(date +"%Y%m%d%H%m")"
+	timestamp="$(date +"%Y%m%d%H%M")"
 
 	# format the file
 	{
