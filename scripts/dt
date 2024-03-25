@@ -1,0 +1,6 @@
+#!/bin/bash
+# Create daily thread title for Skool and copy to clipboard
+
+today=$(date +"%Y-%m-%d")
+
+echo "Daily Thread $today" | pbcopy
