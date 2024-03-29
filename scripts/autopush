@@ -5,8 +5,8 @@
 SOURCE_DIR='/Users/mischa/Library/Mobile Documents/iCloud~md~obsidian/Documents/The Garden/Zettelkasten/zp'
 DEST_DIR="/Users/mischa/Repos/github.com/jackyzha0/quartz/content"
 
-# Use rsync to sync the folders
-rsync -av "$SOURCE_DIR/" "$DEST_DIR"
+# sync files with rsync
+rsync --verbose --recursive --delete --whole-file "$SOURCE_DIR/" "$DEST_DIR" >>/tmp/zksync.log 2>&1
 
 cd /Users/mischa/Repos/github.com/jackyzha0/quartz || exit
 git add .

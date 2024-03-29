@@ -37,6 +37,9 @@ export GOPATH="$HOME/go/"
 # dotnet
 export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
 
+# get rid of mail notifications on MacOS
+unset MAILCHECK
+
 # ~~~~~~~~~~~~~~~ Path configuration ~~~~~~~~~~~~~~~~~~~~~~~~
 # function from Arch Wiki, to prevent adding directories multiple times
 
