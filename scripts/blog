@@ -29,7 +29,7 @@ open_file() {
 
 	# set up the yaml frontmatter
 	echo "---" >>"$1/$filename.md"
-	echo "title: " >>"$1/$filename.md"
+	echo "title: $filename" >>"$1/$filename.md"
 	echo "date: $date" >>"$1/$filename.md"
 
 	if [[ $2 = "zet" ]]; then

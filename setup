@@ -55,13 +55,13 @@ brew install --cask alacritty
 # amethyst fzf nvim exa hugo bash-completion@2 newsboat kubectl starship
 
 # ubuntu packages apt
-sudo apt install ripgrep gh starship
+sudo apt install ripgrep gh
 
 # ubuntu apt neovim setup
 sudo apt install gcc g++ unzip
 
 # ubuntu brew for vim and neovim setup
-sudo apt install fd fzf kubectl kubectx derailed/k9s/k9s
+sudo apt install fd fzf kubectl kubectx derailed/k9s/k9s starship
 
 # ubuntu brew for neovim setup
 brew install neovim go lazygit
