@@ -3,4 +3,4 @@
 
 today=$(date +"%Y-%m-%d")
 
-echo "Daily Thread $today" | pbcopy
+echo "Daily Chat Thread $today" | pbcopy
