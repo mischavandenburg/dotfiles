@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# syncs public zettels to Quartz repo and publishes them
+
+SOURCE_DIR='/Users/mischa/Library/Mobile Documents/iCloud~md~obsidian/Documents/The Garden/Zettelkasten/zp'
+DEST_DIR="/Users/mischa/Repos/github.com/mischavandenburg/zettelkasten/content"
+
+# sync files with rsync
+# rsync --verbose --recursive --delete --whole-file "$SOURCE_DIR/" "$DEST_DIR" >>/tmp/zksync.log 2>&1
+rsync --recursive --verbose --delete --times "$SOURCE_DIR/" "$DEST_DIR" >>/tmp/zksync.log 2>&1
+
+cd /Users/mischa/Repos/github.com/mischavandenburg/zettelkasten || exit
+git add .
+git commit -m "Automated commit at $(date)"
+git push
