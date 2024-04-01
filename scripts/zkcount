@@ -1,0 +1,10 @@
+#!/bin/bash
+# Counts amount of notes in my Zettelkasten.
+# Including full paths for use with cronjob on MacOS.
+# 0 7,13,19,20 * * * /Users/mischa/Repos/github.com/mischavandenburg/dotfiles/scripts/zkcount
+
+ZETTELKASTEN="$HOME/garden"
+
+COUNT=$(/opt/homebrew/bin/fd -L .md "$ZETTELKASTEN" | /usr/bin/wc -l | /usr/bin/xargs)
+
+/usr/bin/curl -d "count=$COUNT" -X POST http://zktracker.mischavandenburg.net/count
