@@ -5,6 +5,6 @@ gsed -i 's/size = 25/size = 35/g' /users/mischa/repos/github.com/mischavandenbur
 cat <<EOF
 Recording checklist:
 - Check if microphone is on
-- Turn on Keycastr
+- Turn on Keycastr - ctrl opt cmd K
 - Verify if recording proper screen
 EOF

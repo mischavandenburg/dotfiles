@@ -129,6 +129,7 @@ fi
 #{
 ssh-add -q ~/.ssh/id_ed25519
 ssh-add -q ~/.ssh/vanoord
+ssh-add -q ~/.ssh/delegate
 #} &>/dev/null
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -148,6 +149,9 @@ alias ..="cd .."
 alias scripts='cd $SCRIPTS'
 alias cdblog="cd ~/websites/blog"
 alias cdpblog='cd $SECOND_BRAIN/2-areas/blog/content'
+
+# Repos
+
 alias lab='cd $LAB'
 alias cks='cd $LAB/kubernetes/cks/'
 alias alab='cd $GHREPOS/azure-lab'
@@ -157,6 +161,10 @@ alias repos='cd $REPOS'
 alias cdgo='cd $GHREPOS/go/'
 alias ex='cd $REPOS/github.com/mischavandenburg/go/Exercism/'
 alias rwdot='cd $REPOS/github.com/rwxrob/dot'
+
+alias avm='cd $REPOS/github.com/Azure/bicep-registry-modules'
+alias d='cd $REPOS/delegate'
+
 alias c="clear"
 alias icloud="cd \$ICLOUD"
 alias rob='cd $REPOS/github.com/rwxrob'
