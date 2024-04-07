@@ -158,6 +158,7 @@ alias alab='cd $GHREPOS/azure-lab'
 alias dot='cd $GHREPOS/dotfiles'
 alias zk='cd $GHREPOS/zettelkasten'
 alias repos='cd $REPOS'
+alias ghrepos='cd $GHREPOS'
 alias cdgo='cd $GHREPOS/go/'
 alias ex='cd $REPOS/github.com/mischavandenburg/go/Exercism/'
 alias rwdot='cd $REPOS/github.com/rwxrob/dot'
@@ -189,6 +190,10 @@ alias sv='sudoedit'
 alias t='tmux'
 alias e='exit'
 alias syu='sudo pacman -Syu'
+
+# Azure
+
+alias sub='az account set -s'
 
 # git
 alias gp='git pull'
