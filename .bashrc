@@ -35,43 +35,14 @@ export GOPRIVATE="github.com/$GITUSER/*,gitlab.com/$GITUSER/*"
 export GOPATH="$HOME/go/"
 
 # dotnet
-export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
+export DOTNET_ROOT="$HOME/dotnet"
 
 # get rid of mail notifications on MacOS
 unset MAILCHECK
 
 # ~~~~~~~~~~~~~~~ Path configuration ~~~~~~~~~~~~~~~~~~~~~~~~
-# function from Arch Wiki, to prevent adding directories multiple times
 
-# set_path(){
-#
-#     # Check if user id is 1000 or higher
-#     [ "$(id -u)" -ge 1000 ] || return
-#
-#     for i in "$@";
-#     do
-#         # Check if the directory exists
-#         [ -d "$i" ] || continue
-#
-#         # Check if it is not already in your $PATH.
-#         echo "$PATH" | grep -Eq "(^|:)$i(:|$)" && continue
-#
-#         # Then append it to $PATH and export it
-#         export PATH="${PATH}:$i"
-#     done
-# }
-#
-# set_path "$HOME"/git/lab/bash "$HOME"/.local/bin
-
-# https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path
-# PATH="${PATH:+${PATH}:}~/opt/bin"   # appending
-# PATH="~/opt/bin${PATH:+:${PATH}}"   # prepending
-
-# Commands also provided by macOS and the commands dir, dircolors, vdir have been installed with the prefix "g".
-# If you need to use these commands with their normal names, you can add a "gnubin" directory to your PATH with:
-#  PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-
-PATH="${PATH:+${PATH}:}"$SCRIPTS":/opt/homebrew/opt/dotnet@6/bin:/opt/homebrew/opt/dotnet/bin:"$HOME"/.local/bin:"$HOME"/.dotnet/tools" # appending
+PATH="${PATH:+${PATH}:}"$SCRIPTS":"$HOME"/.local/bin:$HOME/dotnet" # appending
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
