@@ -49,10 +49,16 @@ ln -sf "$PWD/newsboat/urls" "$HOME"/.newsboat/urls
 # install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install --cask alacritty
+# get the font out of the way first, it's the most annoying
+#
+# install for Mac using brew. For ubuntu:
+
+# mkdir -p $HOME/.local/share/fonts
+# cp $PWD/fonts/UbuntuMono* $HOME/.local/share/fonts
 
 # brew packages Mac
 # amethyst fzf nvim exa hugo bash-completion@2 newsboat kubectl starship
+# brew install --cask alacritty
 
 # ubuntu packages apt
 sudo apt install ripgrep gh
