@@ -18,18 +18,10 @@ new_note() {
 
 ## Habits
 
-- [ ] A healthy breakfast
-- [ ] Writing my daily tasks
-- [ ] Write at least one line of code
-- [ ] Contribute to the community
-- [ ] Exercise for at least 20 minutes
-- [ ] Tidy up
-
 - [ ] Calorie logging
 - [ ] Yoga
 - [ ] Bedtime routine
 - [ ] Skin routine
-- [ ] CKS Katas - RBAC & Network Policies
 
 ## Log
 EOF

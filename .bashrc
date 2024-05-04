@@ -92,6 +92,7 @@ fi
 
 if [[ $(grep -E "^(ID|NAME)=" /etc/os-release | grep -q "ubuntu")$? == 0 ]]; then
 	eval "$(ssh-agent -s)" >/dev/null
+	eval "$(fzf --bash)"
 fi
 
 # adding keys was buggy, add them outside of the script for now
@@ -155,7 +156,7 @@ alias ll='ls -la'
 alias la='ls -lathr'
 
 # finds all files recursively and sorts by last modification, ignore hidden files
-alias last='find . -type f -not -path "*/\.*" -exec ls -lrt {} +'
+alias lastmod='find . -type f -not -path "*/\.*" -exec ls -lrt {} +'
 
 alias sv='sudoedit'
 alias t='tmux'
@@ -257,7 +258,7 @@ else
 fi
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/mischa/.rd/bin:$PATH"
+export PATH="/home/mischa/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # Only needed for npm install on WSL
