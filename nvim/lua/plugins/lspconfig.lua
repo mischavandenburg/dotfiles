@@ -16,6 +16,7 @@ return {
         -- azure_pipelines_ls = {},
         terraformls = {},
         helm_ls = {},
+        csharp_ls = {},
       },
     },
   },
