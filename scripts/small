@@ -1,3 +1,4 @@
 #!/bin/bash
 
 gsed -i 's/size = 40/size = 25/g' /Users/mischa/Repos/github.com/mischavandenburg/dotfiles/alacritty.toml
+gsed -i 's/size = 95/size = 25/g' /Users/mischa/Repos/github.com/mischavandenburg/dotfiles/alacritty.toml
