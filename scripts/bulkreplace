@@ -4,8 +4,8 @@
 
 # old='\"editable\": false'
 # new='\"editable\": true'
-old='#video'
-new='#Video'
+old=':443'
+new=''
 
 # yaml
 # find . -type f -name "*.yaml" -exec gsed -i "s/$old/$new/g" {} \;
@@ -17,7 +17,7 @@ new='#Video'
 # find . -type f -name "*.jsonc" -exec gsed -i "s/$old/$new/g" {} \;
 
 #markdown
-find . -type f -name "*.md" -exec gsed -i "s/$old/$new/g" {} \;
+# find . -type f -name "*.md" -exec gsed -i "s/$old/$new/g" {} \;
 
 # EVERYTHING
-# find . -type f -exec gsed -i "s/$old/$new/g" {} \;
+find . -type f -exec gsed -i "s/$old/$new/g" {} \;

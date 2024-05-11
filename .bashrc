@@ -258,7 +258,7 @@ else
 fi
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/home/mischa/.rd/bin:$PATH"
+export PATH="/Users/mischa/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # Only needed for npm install on WSL
