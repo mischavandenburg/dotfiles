@@ -13,7 +13,7 @@ mkdir -p "$XDG_CONFIG_HOME"/skhd
 mkdir -p "$XDG_CONFIG_HOME"/k9s
 # mkdir -p "$XDG_CONFIG_HOME"/wezterm
 
-git clone https://github.com/alacritty/alacritty-theme "$XDG_CONFIG_HOME"/alacritty/themes
+# git clone https://github.com/alacritty/alacritty-theme "$XDG_CONFIG_HOME"/alacritty/themes
 
 # Symbolic links
 
@@ -47,7 +47,7 @@ ln -sf "$PWD/newsboat/urls" "$HOME"/.newsboat/urls
 # Packages
 
 # install brew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # get the font out of the way first, it's the most annoying
 #
@@ -61,16 +61,16 @@ ln -sf "$PWD/newsboat/urls" "$HOME"/.newsboat/urls
 # brew install --cask alacritty
 
 # ubuntu packages apt
-sudo apt install ripgrep gh
+# sudo apt install ripgrep gh
 
 # ubuntu apt neovim setup
-sudo apt install gcc g++ unzip
+# sudo apt install gcc g++ unzip
 
 # ubuntu brew for vim and neovim setup
-sudo apt install fd fzf kubectl kubectx derailed/k9s/k9s starship
+# sudo apt install fd fzf kubectl kubectx derailed/k9s/k9s starship
 
 # ubuntu brew for neovim setup
-brew install neovim go lazygit
+# brew install neovim go lazygit
 
 # ubuntu specific notes
 # create symbolic link to neovim from vim when not using neovim on
