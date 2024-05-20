@@ -227,14 +227,11 @@ alias kcp='kubectl config use-context admin@homelab-production'
 source <(flux completion bash)
 alias fgk='flux get kustomizations'
 
-# talos
+# completions
 source <(talosctl completion bash)
-
-# EDB
 source <(kubectl-cnp completion bash)
-
-# cilium
 source <(cilium completion bash)
+source <(devpod completion bash)
 
 # fzf aliases
 # use fp to do a fzf search and preview the files
