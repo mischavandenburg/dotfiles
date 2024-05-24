@@ -26,6 +26,7 @@ ln -sf "$PWD/.inputrc" "$HOME"/.inputrc
 ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
 ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 ln -sf "$PWD/skhdrc" "$XDG_CONFIG_HOME"/skhd/skhdrc
+ln -sf "$PWD/sway" "$XDG_CONFIG_HOME/sway"
 # ln -sf "$PWD/newsboat/config" "$HOME"/.newsboat/config
 # ln -sf "$PWD/newsboat/urls" "$HOME"/.newsboat/urls
 # ln -sf "$PWD/wezterm.lua" /mnt/c/Users/PD2
