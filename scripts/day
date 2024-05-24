@@ -1,9 +1,9 @@
 #!/bin/bash
 
 today=$(date +"%Y-%m-%d")
-tomorrow=$(gdate -d "tomorrow" '+%Y-%m-%d')
-yesterday=$(gdate -d "yesterday" '+%Y-%m-%d')
-file="$SECOND_BRAIN"'/periodic-notes/daily-notes/'$(date +"%Y-%m-%d").md
+tomorrow=$(date -d "tomorrow" +"%Y-%m-%d")
+yesterday=$(date -d "yesterday" +"%Y-%m-%d")
+file="$SECOND_BRAIN/periodic-notes/daily-notes/$today.md"
 
 cd "$SECOND_BRAIN" || exit
 
@@ -20,8 +20,7 @@ new_note() {
 
 - [ ] Calorie logging
 - [ ] Yoga
-- [ ] Bedtime routine
-- [ ] Skin routine
+- [ ] Exercise
 
 ## Log
 EOF

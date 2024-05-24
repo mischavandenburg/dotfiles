@@ -38,7 +38,8 @@ ln -sf "$PWD/skhdrc" "$XDG_CONFIG_HOME"/skhd/skhdrc
 # and when called it needs to be quoted.
 # export SECOND_BRAIN=("/Users/mischa/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain-01-07-23")
 # export SECOND_BRAIN=("/Users/mischa/Library/Mobile Documents/iCloud~md~obsidian/Documents/The Garden")
-# ln -sf "$SECOND_BRAIN" ~/garden
+export SECOND_BRAIN=("/home/mischa/Repos/github.com/mischavandenburg/second-brain/")
+ln -sf "$SECOND_BRAIN" ~/garden
 #
 # iCloud
 # export ICLOUD=("/Users/mischa/Library/Mobile Documents/com~apple~CloudDocs")
@@ -76,3 +77,10 @@ cp $PWD/fonts/UbuntuMono* $HOME/.local/share/fonts
 # create symbolic link to neovim from vim when not using neovim on
 # Ubuntu systems, because I use the v alias everywhere.
 # sudo ln -sf /usr/bin/vim /usr/bin/nvim
+#
+
+# Fedora
+
+# brew install fd fzf ripgrep
+
+# /usr/bin/python3 -m pip install pynvim
