@@ -251,7 +251,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 else
 	#	source /usr/share/fzf/key-bindings.bash
 	#	source /usr/share/fzf/completion.bash
-	[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+	# The first one worked on Ubuntu, the eval one on Fedora. Keeping for reference.
+	# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+	eval "$(fzf --bash)"
 fi
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
