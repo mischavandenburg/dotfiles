@@ -14,4 +14,15 @@ return {
       vim.fn["mkdp#util#install"]()
     end,
   },
+
+  -- {
+  --   "lcheylus/overlength.nvim",
+  --   config = function()
+  --     require("overlength").setup({
+  --       textwidth_mode = 0,
+  --       default_overlength = 80,
+  --       disable_ft = { "qf", "help", "man", "checkhealth", "lazy", "packer", "NvimTree", "Telescope", "WhichKey" },
+  --     })
+  --   end,
+  -- },
 }

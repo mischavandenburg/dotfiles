@@ -26,6 +26,10 @@ opt.foldenable = false
 opt.number = false
 opt.relativenumber = false
 opt.scrolloff = 8
+
+-- wrap / break
+
+opt.textwidth = 80
 opt.linebreak = true
 
 -- indentation

@@ -10,6 +10,17 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- Set textwidth to 80 and automatic line breaks for markdown files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "gitcommit", "markdown", "pandoc" },
+  callback = function()
+    require("cmp").setup({ enabled = false })
+    vim.opt_local.textwidth = 80
+    vim.opt_local.formatoptions:append("a")
+    vim.opt_local.colorcolumn = "80"
+  end,
+})
+
 -- attemting to disable terraform ls on fixture file
 -- vim.api.nvim_create_autocmd("BufEnter", {
 --   pattern = "*fixture*",
