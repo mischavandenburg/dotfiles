@@ -4,8 +4,8 @@
 
 # old='\"editable\": false'
 # new='\"editable\": true'
-old=':443'
-new=''
+old='name: '\''budgetDeployment'\'''
+new='name: '\''budgetDeployment-${vDeploymentId}'\'''
 
 # yaml
 # find . -type f -name "*.yaml" -exec gsed -i "s/$old/$new/g" {} \;

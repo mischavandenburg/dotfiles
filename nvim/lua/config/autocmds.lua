@@ -16,7 +16,7 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function()
     require("cmp").setup({ enabled = false })
     vim.opt_local.textwidth = 80
-    vim.opt_local.formatoptions:append("a")
+    -- vim.opt_local.formatoptions:append("a")
     vim.opt_local.colorcolumn = "80"
   end,
 })
