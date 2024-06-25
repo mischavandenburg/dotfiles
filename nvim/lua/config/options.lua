@@ -5,22 +5,8 @@
 local opt = vim.opt
 
 -- try this: vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
---
 
 opt.ignorecase = true
-
--- pandoc related
-
-opt.spell = false
-opt.foldmethod = "manual"
-opt.foldenable = false
-
--- colorschemes
--- require('gruvbox-material').setup()
--- o.termguicolors = true
--- opt.gruvbox_material_enable_italic_comment = 1
--- undo
--- vim.opt.undodir = vim.fn.expand('~/.nvim/undodir')
 
 -- scrolling
 opt.number = false
