@@ -26,7 +26,7 @@ export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
 export SCRIPTS="$DOTFILES/scripts"
 export ICLOUD="$HOME/icloud"
-export SECOND_BRAIN="$HOME/garden"
+export SECOND_BRAIN="$HOME/Zettelkasten"
 
 # Go related. In general all executables and scripts go in .local/bin
 export GOBIN="$HOME/.local/bin"
@@ -128,7 +128,6 @@ alias lab='cd $LAB'
 alias cks='cd $LAB/kubernetes/cks/'
 alias alab='cd $GHREPOS/azure-lab'
 alias dot='cd $GHREPOS/dotfiles'
-alias zk='cd $GHREPOS/zettelkasten'
 alias repos='cd $REPOS'
 alias ghrepos='cd $GHREPOS'
 alias cdgo='cd $GHREPOS/go/'
@@ -200,7 +199,7 @@ alias s='startx'
 # vim & second brain
 alias sb="cd \$SECOND_BRAIN"
 alias in="cd \$SECOND_BRAIN/0 Inbox/"
-alias vbn='python ~/git/python/brainfile.py'
+alias zk="cd \$SECOND_BRAIN"
 
 # starting programmes
 alias cards='python3 /opt/homebrew/lib/python3.11/site-packages/mtg_proxy_printer/'

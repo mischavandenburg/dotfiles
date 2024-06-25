@@ -39,8 +39,9 @@ ln -sf "$PWD/sway" "$XDG_CONFIG_HOME/sway"
 # and when called it needs to be quoted.
 # export SECOND_BRAIN=("/Users/mischa/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain-01-07-23")
 # export SECOND_BRAIN=("/Users/mischa/Library/Mobile Documents/iCloud~md~obsidian/Documents/The Garden")
-export SECOND_BRAIN=("/home/mischa/Repos/github.com/mischavandenburg/second-brain/")
-ln -sf "$SECOND_BRAIN" ~/garden
+export SECOND_BRAIN=("/Users/mischa/Library/Mobile Documents/iCloud~md~obsidian/Documents/Zettelkasten")
+# export SECOND_BRAIN=("/home/mischa/Repos/github.com/mischavandenburg/second-brain/")
+ln -sf "$SECOND_BRAIN" ~/Zettelkasten
 #
 # iCloud
 # export ICLOUD=("/Users/mischa/Library/Mobile Documents/com~apple~CloudDocs")
@@ -55,8 +56,8 @@ ln -sf "$SECOND_BRAIN" ~/garden
 #
 # install for Mac using brew. For ubuntu:
 
-mkdir -p $HOME/.local/share/fonts
-cp $PWD/fonts/UbuntuMono* $HOME/.local/share/fonts
+# mkdir -p $HOME/.local/share/fonts
+# cp $PWD/fonts/UbuntuMono* $HOME/.local/share/fonts
 
 # brew packages Mac
 # amethyst fzf nvim exa hugo bash-completion@2 newsboat kubectl starship
