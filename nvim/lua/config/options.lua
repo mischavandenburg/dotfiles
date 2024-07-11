@@ -15,8 +15,8 @@ opt.scrolloff = 8
 
 -- wrap / break
 
-opt.textwidth = 80
-opt.linebreak = true
+-- opt.textwidth = 80
+-- opt.linebreak = true
 
 -- indentation
 
