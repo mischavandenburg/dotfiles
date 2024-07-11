@@ -3,7 +3,7 @@
 # Including full paths for use with cronjob on MacOS.
 # 0 7,13,19,20 * * * /Users/mischa/Repos/github.com/mischavandenburg/dotfiles/scripts/zkcount
 
-ZETTELKASTEN="$HOME/garden"
+ZETTELKASTEN="$HOME/Zettelkasten"
 
 COUNT=$(/opt/homebrew/bin/fd -L .md "$ZETTELKASTEN" | /usr/bin/wc -l | /usr/bin/xargs)
 
