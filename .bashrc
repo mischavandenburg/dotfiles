@@ -58,41 +58,41 @@ export HISTCONTROL=ignorespace
 # This function is stolen from rwxrob
 
 clone() {
-	local repo="$1" user
-	local repo="${repo#https://github.com/}"
-	local repo="${repo#git@github.com:}"
-	if [[ $repo =~ / ]]; then
-		user="${repo%%/*}"
-	else
-		user="$GITUSER"
-		[[ -z "$user" ]] && user="$USER"
-	fi
-	local name="${repo##*/}"
-	local userd="$REPOS/github.com/$user"
-	local path="$userd/$name"
-	[[ -d "$path" ]] && cd "$path" && return
-	mkdir -p "$userd"
-	cd "$userd"
-	echo gh repo clone "$user/$name" -- --recurse-submodule
-	gh repo clone "$user/$name" -- --recurse-submodule
-	cd "$name"
+  local repo="$1" user
+  local repo="${repo#https://github.com/}"
+  local repo="${repo#git@github.com:}"
+  if [[ $repo =~ / ]]; then
+    user="${repo%%/*}"
+  else
+    user="$GITUSER"
+    [[ -z "$user" ]] && user="$USER"
+  fi
+  local name="${repo##*/}"
+  local userd="$REPOS/github.com/$user"
+  local path="$userd/$name"
+  [[ -d "$path" ]] && cd "$path" && return
+  mkdir -p "$userd"
+  cd "$userd"
+  echo gh repo clone "$user/$name" -- --recurse-submodule
+  gh repo clone "$user/$name" -- --recurse-submodule
+  cd "$name"
 } && export -f clone
 
 # ~~~~~~~~~~~~~~~ SSH ~~~~~~~~~~~~~~~~~~~~~~~~
 # SSH Script from arch wiki
 
 if ! pgrep -u "$USER" ssh-agent >/dev/null; then
-	ssh-agent >"$XDG_RUNTIME_DIR/ssh-agent.env"
+  ssh-agent >"$XDG_RUNTIME_DIR/ssh-agent.env"
 fi
 if [[ ! "$SSH_AUTH_SOCK" ]]; then
-	source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+  source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
 # Only run on Ubuntu
 
 if [[ $(grep -E "^(ID|NAME)=" /etc/os-release | grep -q "ubuntu")$? == 0 ]]; then
-	eval "$(ssh-agent -s)" >/dev/null
-	eval "$(fzf --bash)"
+  eval "$(ssh-agent -s)" >/dev/null
+  eval "$(fzf --bash)"
 fi
 
 # adding keys was buggy, add them outside of the script for now
@@ -172,12 +172,12 @@ alias dr='dotnet run'
 # bash parameter completion for the dotnet CLI
 
 function _dotnet_bash_complete() {
-	local cur="${COMP_WORDS[COMP_CWORD]}" IFS=$'\n' # On Windows you may need to use use IFS=$'\r\n'
-	local candidates
+  local cur="${COMP_WORDS[COMP_CWORD]}" IFS=$'\n' # On Windows you may need to use use IFS=$'\r\n'
+  local candidates
 
-	read -d '' -ra candidates < <(dotnet complete --position "${COMP_POINT}" "${COMP_LINE}" 2>/dev/null)
+  read -d '' -ra candidates < <(dotnet complete --position "${COMP_POINT}" "${COMP_LINE}" 2>/dev/null)
 
-	read -d '' -ra COMPREPLY < <(compgen -W "${candidates[*]:-}" -- "$cur")
+  read -d '' -ra COMPREPLY < <(compgen -W "${candidates[*]:-}" -- "$cur")
 }
 
 complete -f -F _dotnet_bash_complete dotnet
@@ -242,18 +242,18 @@ alias vf='v $(fp)'
 source "$HOME/.privaterc"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-	source "$HOME/.fzf.bash"
-	# echo "I'm on Mac!"
+  source "$HOME/.fzf.bash"
+  # echo "I'm on Mac!"
 
-	# brew bash completion
-	[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+  # brew bash completion
+  [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 else
-	#	source /usr/share/fzf/key-bindings.bash
-	#	source /usr/share/fzf/completion.bash
+  #	source /usr/share/fzf/key-bindings.bash
+  #	source /usr/share/fzf/completion.bash
 
-	# The first one worked on Ubuntu, the eval one on Fedora. Keeping for reference.
-	# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-	eval "$(fzf --bash)"
+  # The first one worked on Ubuntu, the eval one on Fedora. Keeping for reference.
+  # [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+  eval "$(fzf --bash)"
 fi
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
@@ -264,3 +264,7 @@ export PATH="/Users/mischa/.rd/bin:$PATH"
 #export NVM_DIR="$HOME/.config/nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+source /Users/mischa/.bash_completions/update_metrics.py.sh
+
+source /Users/mischa/.bash_completions/typer.sh
