@@ -42,13 +42,11 @@ ln -sf "$PWD/.zshrc" "$HOME"/.zshrc
 # set up blog
 # git clone git@github.com:mischavandenburg/hugo-PaperModX-theme.git themes/PaperModX --depth=1
 
-# Second Brain
+# Zettelkasten
 # This one's a little tricky on MacOS because the path contains a space. It needs to be stored as an array,
 # and when called it needs to be quoted.
 # export ZETTELKASTEN=("/Users/mischa/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain-01-07-23")
-# export ZETTELKASTEN=("/Users/mischa/Library/Mobile Documents/iCloud~md~obsidian/Documents/The Garden")
 # export ZETTELKASTEN=("/Users/mischa/Library/Mobile Documents/iCloud~md~obsidian/Documents/Zettelkasten")
-# export ZETTELKASTEN=("/home/mischa/Repos/github.com/mischavandenburg/second-brain/")
 # ln -sf "$ZETTELKASTEN" ~/Zettelkasten
 #
 # iCloud
@@ -94,3 +92,12 @@ ln -sf "$PWD/.zshrc" "$HOME"/.zshrc
 # brew install fd fzf ripgrep
 
 # /usr/bin/python3 -m pip install pynvim
+
+# Arch Linux
+
+# pacman packages:
+# zsh zsh-completions ttf-ubuntu-mono-nerd fzf npm unzip xclip tmux ripgrep fd
+#
+# set up prompt
+# mkdir -p "$HOME/.zsh"
+# git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
