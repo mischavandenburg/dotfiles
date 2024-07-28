@@ -21,7 +21,7 @@ open_file() {
 	touch "$1/$filename.md"
 
 	# cd into second brain
-	cd "$SECOND_BRAIN" || exit
+	cd "$ZETTELKASTEN" || exit
 
 	# Format the title by removing dashes
 	title=$filename

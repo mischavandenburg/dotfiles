@@ -1,9 +1,9 @@
 #!/bin/bash
 
 today=$(date +"%Y-%m-%d")
-file="$SECOND_BRAIN"'/workouts/workout-'"$today".md
+file="$ZETTELKASTEN"'/workouts/workout-'"$today".md
 
-cd "$SECOND_BRAIN" || exit
+cd "$ZETTELKASTEN" || exit
 
 new_note() {
 	touch "$file"

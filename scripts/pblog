@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd "$SECOND_BRAIN"/2-areas/blog/content || exit
+cd "$ZETTELKASTEN"/2-areas/blog/content || exit
 
 read -rp "Enter a filename: " filename
 

@@ -55,4 +55,4 @@ if [[ $# -eq 1 ]]; then
 	filename=$1
 fi
 
-open_file "$SECOND_BRAIN/0 Inbox"
+open_file "$ZETTELKASTEN/0 Inbox"

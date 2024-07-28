@@ -75,7 +75,7 @@ export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
 export SCRIPTS="$DOTFILES/scripts"
 export ICLOUD="$HOME/icloud"
-export SECOND_BRAIN="$HOME/Zettelkasten"
+export ZETTELKASTEN="$HOME/Zettelkasten"
 
 # Go related. In general all executables and scripts go in .local/bin
 export GOBIN="$HOME/.local/bin"
@@ -120,7 +120,7 @@ alias v=nvim
 # alias ..="cd .."
 alias scripts='cd $SCRIPTS'
 alias cdblog="cd ~/websites/blog"
-alias cdpblog='cd $SECOND_BRAIN/2-areas/blog/content'
+alias cdpblog='cd $ZETTELKASTEN/2-areas/blog/content'
 
 # Repos
 
@@ -165,9 +165,8 @@ alias lg='lazygit'
 
 
 # Zettelkasten
-alias sb="cd \$SECOND_BRAIN"
-alias in="cd \$SECOND_BRAIN/0 Inbox/"
-alias zk="cd \$SECOND_BRAIN"
+alias in="cd \$ZETTELKASTEN/0 Inbox/"
+alias zk="cd \$ZETTELKASTEN"
 
 
 # Kubernetes

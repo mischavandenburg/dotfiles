@@ -4,8 +4,8 @@
 
 # old='\"editable\": false'
 # new='\"editable\": true'
-old='name: '\''budgetDeployment'\'''
-new='name: '\''budgetDeployment-${vDeploymentId}'\'''
+old='ZETTELKASTEN'
+new='ZETTELKASTEN'
 
 # yaml
 # find . -type f -name "*.yaml" -exec gsed -i "s/$old/$new/g" {} \;
@@ -20,4 +20,9 @@ new='name: '\''budgetDeployment-${vDeploymentId}'\'''
 # find . -type f -name "*.md" -exec gsed -i "s/$old/$new/g" {} \;
 
 # EVERYTHING
-find . -type f -exec gsed -i "s/$old/$new/g" {} \;
+# find . -type f -exec gsed -i "s/$old/$new/g" {} \;
+
+# EVERYTHING including hidden files
+# find . -name ".*" -o -name "*" -type f -exec gsed -i "s/$old/$new/g" {} \;
+
+find . -type f \( -name ".*" -o -name "*" \) -exec gsed -i "s/$old/$new/g" {} +

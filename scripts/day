@@ -3,9 +3,9 @@
 today=$(date +"%Y-%m-%d")
 tomorrow=$(date -d "tomorrow" +"%Y-%m-%d")
 yesterday=$(date -d "yesterday" +"%Y-%m-%d")
-file="$SECOND_BRAIN/periodic-notes/daily-notes/$today.md"
+file="$ZETTELKASTEN/periodic-notes/daily-notes/$today.md"
 
-cd "$SECOND_BRAIN" || exit
+cd "$ZETTELKASTEN" || exit
 
 new_note() {
 	touch "$file"

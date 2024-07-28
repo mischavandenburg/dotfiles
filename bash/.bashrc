@@ -26,7 +26,7 @@ export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
 export SCRIPTS="$DOTFILES/scripts"
 export ICLOUD="$HOME/icloud"
-export SECOND_BRAIN="$HOME/Zettelkasten"
+export ZETTELKASTEN="$HOME/Zettelkasten"
 
 # Go related. In general all executables and scripts go in .local/bin
 export GOBIN="$HOME/.local/bin"
@@ -120,7 +120,7 @@ alias vo='cd $REPOS/github.com/VanOord/'
 alias ..="cd .."
 alias scripts='cd $SCRIPTS'
 alias cdblog="cd ~/websites/blog"
-alias cdpblog='cd $SECOND_BRAIN/2-areas/blog/content'
+alias cdpblog='cd $ZETTELKASTEN/2-areas/blog/content'
 
 # Repos
 
@@ -197,9 +197,8 @@ alias sbr='source ~/.bashrc'
 alias s='startx'
 
 # vim & second brain
-alias sb="cd \$SECOND_BRAIN"
-alias in="cd \$SECOND_BRAIN/0 Inbox/"
-alias zk="cd \$SECOND_BRAIN"
+alias in="cd \$ZETTELKASTEN/0 Inbox/"
+alias zk="cd \$ZETTELKASTEN"
 
 # starting programmes
 alias cards='python3 /opt/homebrew/lib/python3.11/site-packages/mtg_proxy_printer/'
