@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Source directory
+SOURCE_DIR="$HOME/Zettelkasten"
+
+# Destination directory (iCloud Drive backup folder)
+DEST_DIR="$HOME/Library/Mobile Documents/com~apple~CloudDocs/backup/Zettelkasten"
+
+# Create the destination directory if it doesn't exist
+mkdir -p "$DEST_DIR"
+
+# Run rsync
+rsync -av --delete "$SOURCE_DIR/" "$DEST_DIR"
+
+# Print completion message
+echo "Backup completed successfully!"
