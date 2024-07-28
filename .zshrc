@@ -12,7 +12,7 @@ path=(
     $SCRIPTS
     $HOME/.krew/bin
     $HOME/.rd/bin                   # Rancher Desktop
-    $HOME/*/bin(N)                  # Add all bin directories under HOME
+    # $HOME/*/bin(N)                # Add all bin directories under HOME
     # /usr/local/*/bin(N)           # Add all bin directories under /usr/local
 )
 
@@ -43,7 +43,7 @@ ssh-add -l &>/dev/null
 if [ "$?" -eq 2 ]; then
 
     # Exit code 2 means no agent running, so we start a new one
-    eval "$(ssh-agent -s)" > /dev/null
+    eval "$(ssh-agent -s -t 4h)" > /dev/null
     add_keys
 
 elif [ "$?" -eq 1 ]; then
@@ -191,7 +191,7 @@ source <(fzf --zsh)
 
 # ~~~~~~~~~~~~~~~ Completion ~~~~~~~~~~~~~~~~~~~~~~~~
 
-# fpath+=~/.zfunc
+fpath+=~/.zfunc
 
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
@@ -205,3 +205,4 @@ zstyle ':completion:*' menu select
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/mischa/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
