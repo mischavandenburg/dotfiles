@@ -28,32 +28,55 @@ export PATH
 
 # Function to add keys to SSH agent
 
-add_keys() {
+# add_keys() {
+#     if [[ "$OSTYPE" == darwin* ]]; then
+#         # Get the password from the Apple Keychain when running on MacOS
+#         ssh-add --apple-use-keychain -t 4h "$HOME/.ssh/gh_macbook_pro" 2>/dev/null
+#     else
+#         ssh-add -t 4h "$HOME/.ssh/gh_thinkpad_arch" 2>/dev/null
+#     fi
+# }
+#
+# # Check if ssh-agent is already running
+# ssh-add -l &>/dev/null
+# if [ "$?" -eq 2 ]; then
+#     # Exit code 2 means no agent running, so we start a new one
+#     eval "$(ssh-agent -s -t 4h)" > /dev/null
+#     add_keys
+#
+# elif [ "$?" -eq 1 ]; then
+#     # Exit code 1 means agent running but no keys, so we add the key
+#     add_keys
+# fi
+#
+# alias addkey="add_keys"
+
+
+# Start the SSH agent with a lifetime of 4 hours if not running already
+# From Arch wiki.
+
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent -t 4h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+fi
+if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
+    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+fi
+
+# Check if keys are added.
+# If no keys are found (exit code 1), add the specified keys.
+
+ssh-add -l &>/dev/null
+
+if [ "$?" -eq 1 ]; then
     if [[ "$OSTYPE" == darwin* ]]; then
+
         # Get the password from the Apple Keychain when running on MacOS
         ssh-add --apple-use-keychain -t 4h "$HOME/.ssh/gh_macbook_pro" 2>/dev/null
     else
-        # If not on MacOS, do this
-        # ssh-add -t 4h "$HOME/.ssh/gh_macbook_pro" 2>/dev/null
+        ssh-add -t 4h "$HOME/.ssh/gh_thinkpad_arch" 2>/dev/null
     fi
-}
-
-# Check if ssh-agent is already running
-ssh-add -l &>/dev/null
-if [ "$?" -eq 2 ]; then
-
-    # Exit code 2 means no agent running, so we start a new one
-    eval "$(ssh-agent -s -t 4h)" > /dev/null
-    add_keys
-
-elif [ "$?" -eq 1 ]; then
-
-    # Exit code 1 means agent running but no keys, so we add the key
-    add_keys
-
 fi
 
-alias addkey="add_keys"
 
 # ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -106,7 +129,14 @@ setopt SHARE_HISTORY      # Share history between sessions
 
 
 # Moved to pure prompt 27-07-2024 because it's even cleaner
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
+
+
+    if [[ "$OSTYPE" == darwin* ]]; then
+      fpath+=("$(brew --prefix)/share/zsh/site-functions")
+    else
+      fpath+=($HOME/.zsh/pure)
+    fi
+	    
 autoload -U promptinit; promptinit
 prompt pure
 
