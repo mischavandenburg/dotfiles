@@ -1,16 +1,18 @@
 #!/bin/bash
 
-# Source directory
 SOURCE_DIR="$HOME/Zettelkasten"
-
-# Destination directory (iCloud Drive backup folder)
 DEST_DIR="$HOME/Library/Mobile Documents/com~apple~CloudDocs/backup/Zettelkasten"
 
-# Create the destination directory if it doesn't exist
 mkdir -p "$DEST_DIR"
 
-# Run rsync
 rsync -av --delete "$SOURCE_DIR/" "$DEST_DIR"
 
-# Print completion message
-echo "Backup completed successfully!"
+cd "$DEST_DIR" || {
+  echo "Error: Unable to change to destination directory"
+  exit 1
+}
+
+git add -A
+git commit -m "Automatic backup commit $(date '+%Y-%m-%d %H:%M:%S')"
+
+echo "Backup and commit completed successfully!"
