@@ -9,6 +9,7 @@ directories=(
   "$XDG_CONFIG_HOME/skhd"
   "$XDG_CONFIG_HOME/k9s"
   "$XDG_CONFIG_HOME/qutebrowser"
+  "$XDG_CONFIG_HOME/sway"
 )
 
 for dir in "${directories[@]}"; do
@@ -23,9 +24,10 @@ items=(
   ".tmux.conf:$HOME/.tmux.conf"
   "nvim:$XDG_CONFIG_HOME/nvim"
   "skhdrc:$XDG_CONFIG_HOME/skhd/skhdrc"
-  "qutebrowser/config.py:$XDG_CONFIG_HOME/qutebrowser/config.py"
   ".zprofile:$HOME/.zprofile"
   ".zshrc:$HOME/.zshrc"
+  "qutebrowser/config.py:$XDG_CONFIG_HOME/qutebrowser/config.py"
+  "sway/config:$XDG_CONFIG_HOME/sway/config"
 )
 
 for item in "${items[@]}"; do
