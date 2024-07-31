@@ -167,8 +167,8 @@ alias lg='lazygit'
 
 
 # Zettelkasten
-alias in="cd \$ZETTELKASTEN/0 Inbox/"
-# alias zk="cd \$ZETTELKASTEN"
+alias in="cd \$ZETTELKASTEN/0\ Inbox/"
+alias cdzk="cd \$ZETTELKASTEN"
 
 
 # Kubernetes
@@ -206,5 +206,7 @@ zstyle ':completion:*' menu select
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/mischa/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+
 
 
