@@ -203,6 +203,13 @@ compinit -u
 
 zstyle ':completion:*' menu select
 
+
+# Example to install completion:
+# talosctl completion zsh > ~/.zfunc/_talosctl
+
+
+# ~~~~~~~~~~~~~~~ Misc ~~~~~~~~~~~~~~~~~~~~~~~~
+
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/mischa/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
