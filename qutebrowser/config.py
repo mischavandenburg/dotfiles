@@ -2155,7 +2155,7 @@ c.url.start_pages = ["https://homepage.mischavandenburg.net"]
 ## Hide the window decoration.  This setting requires a restart on
 ## Wayland.
 ## Type: Bool
-# c.window.hide_decoration = False
+c.window.hide_decoration = True
 
 ## Format to use for the window title. The same placeholders like for
 ## `tabs.title.format` are defined.
