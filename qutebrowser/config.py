@@ -517,7 +517,7 @@ config.load_autoconfig(True)
 ## `colors.webpage.darkmode.policy.images` to `never`.  - "With selective
 ## image inversion": qutebrowser default settings.
 ## Type: Bool
-# c.colors.webpage.darkmode.enabled = False
+c.colors.webpage.darkmode.enabled = True
 
 ## Which images to apply dark mode to.
 ## Type: String
@@ -1687,7 +1687,7 @@ config.load_autoconfig(True)
 ## environment variable and is useful to force using the XCB plugin when
 ## running QtWebEngine on Wayland.
 ## Type: String
-# c.qt.force_platform = None
+# c.qt.force_platform = "wayland"
 
 ## Force a Qt platformtheme to use. This sets the `QT_QPA_PLATFORMTHEME`
 ## environment variable which controls dialogs like the filepicker. By
