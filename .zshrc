@@ -26,34 +26,8 @@ export PATH
 
 # ~~~~~~~~~~~~~~~ SSH ~~~~~~~~~~~~~~~~~~~~~~~~
 
-# Start the SSH agent with a lifetime of 4 hours if not running already
-# From Arch wiki.
 
-# if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-#     ssh-agent -t 4h > "$XDG_RUNTIME_DIR/ssh-agent.env"
-# fi
-# if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
-#     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
-# fi
-#
-# # Check if keys are added.
-# # If no keys are found (exit code 1), add the specified keys.
-#
-# ssh-add -l &>/dev/null
-#
-# if [ "$?" -eq 1 ]; then
-#     if [[ "$OSTYPE" == darwin* ]]; then
-#
-#         # Get the password from the Apple Keychain when running on MacOS
-#         ssh-add --apple-use-keychain -t 4h "$HOME/.ssh/gh_macbook_pro" 2>/dev/null
-#     else
-#         ssh-add -t 4h "$HOME/.ssh/gh_thinkpad_arch" 2>/dev/null
-#     fi
-# fi
-
-
-# SSH Through GPG
-
+# Using GPG + YubiKey for ssh.
 
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
