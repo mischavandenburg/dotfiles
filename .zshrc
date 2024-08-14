@@ -109,6 +109,8 @@ setopt SHARE_HISTORY      # Share history between sessions
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
+PURE_GIT_PULL=0
+
 
 # Moved to pure prompt 27-07-2024 because it's even cleaner
 
