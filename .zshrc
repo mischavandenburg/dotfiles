@@ -117,6 +117,8 @@ prompt pure
 
 alias v=nvim
 
+alias cat=bat
+
 alias scripts='cd $SCRIPTS'
 alias cdblog="cd ~/websites/blog"
 alias c="clear"
